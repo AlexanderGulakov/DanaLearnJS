@@ -1,8 +1,13 @@
 
+let second = parseInt(prompt("Write the quantity of seconds", 3599));
+const minute = Math.floor(second / 60);
+const hour = Math.floor(minute / 60);
 
+// alert("The quantity of "minute = " + minute);
+// alert("The quantity of hour = " + hour);
 
-let numberOfsecond = parseInt(prompt("Write the number of seconds", 5700));
-const numberOfMinute = numberOfsecond / 60;
-const numberOfHour = numberOfMinute / 60;
-alert("The number of minute = " + numberOfMinute);
-alert("The number of Hour = " + numberOfHour.toFixed(1));
+alert(`The quantity of minute = ${minute}. 
+The quantity of hour = ${hour}`)
+
+// Покажи мені стрінг темплейти !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
