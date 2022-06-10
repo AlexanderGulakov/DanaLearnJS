@@ -1,5 +1,9 @@
-const number = parseFloat(prompt('Type in number'));
-const integer = Math.floor(number);
-const float = number%1;
-alert ('Integer - ' + integer);
-alert ('Float = ' + float);
+// diapazon = 1000 - 9999
+let a = 5432
+// need = 432
+
+console.log('5432 % 1', 5432 % 1)              // 0
+console.log('5432 % 10', 5432 % 10)            // 2
+console.log('5432 % 100', 5432 % 100)          // 32
+console.log('5432 % 1000', 5432 % 1000)        // 432
+console.log('5432 % 10000', 5432 % 10000)      // 5432
