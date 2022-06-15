@@ -1,26 +1,22 @@
-/*Дано ширину екрана та кількість елементів, які повинні бути відображені у рядку. 
-Визначити ширину елементів, які повинні бути відображені у цьому рядку. */
+/*Задача 6. 
+З клавіатури вводяться імена двох дітей та кількість шоколадок. 
+Вивести не екран ім’я того учня, у якого кількість шоколадок є більшою.*/
 
+const firstChild = prompt('Enter the name of the first child');
 
-const SCREEN_WIDTH = prompt('Width of the screen', '100'); // Чому я не можу за допомогою typeof перевірити тип даних ???
+const hasChocolatesFirstChild = parseInt(prompt('Enter quantity of chocolates which has the first child'));
 
-let elementsQty = prompt('Elements quantity', '5');
+const secondChild = prompt('Enter the name of the second child');
 
-let elementSize = SCREEN_WIDTH / elementsQty;
+const hasChocolatesSecondChild = parseInt(prompt('Enter quantity of chocolateswhich has the second child'));
 
-alert('Each elemet size =' + ' ' + elementSize);
+if (hasChocolatesFirstChild > hasChocolatesSecondChild) {
+    console.log(firstChild);
+}
 
-console.log(typeof SCREEN_WIDTH);
+else if (hasChocolatesSecondChild > hasChocolatesFirstChild) {
+    console.log(secondChild);
+}
 
-/* Далі пробую розмір екрану в пікселях
-
-const SCREEN_SIZE = parseInt(prompt('SCREEN_SIZE', '100px')); // Напевно не розумію як правильно перетворити тип даних "строк"а на "число"
-
-let elementsQty = parseInt(prompt('elementsQty', '5px'));
-
-//let elementSize = parseInt(prompt('SCREEN_SIZE' / 'elementsQty')); // Через помилковість арифметичної операції тут виникає помилка NaN
-
-//alert('Each elemet size =' + ' ' + elementSize)*/
-
-
-
+else {
+    console.log('Children have an equal quantity of chocolates')
