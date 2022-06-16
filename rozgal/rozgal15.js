@@ -6,9 +6,9 @@
 
 
 const quantityFuel = parseFloat(prompt(" How much fuel do you have? ?", ""));
-const quantityLiters = parseFloat(prompt(" How many liters of fuel per 100 km?", ""));
-const userDistance = parseFloat(prompt(" What is the distance?", ""));
-const distancePerKm = quantityFuel * 100 / 8
+const quantityLiters = parseFloat(prompt(" How many liters of fuel per 100 km?", "")); // назва змінної лайно
+const userDistance = parseFloat(prompt(" What is the distance?", "")); // цієї також
+const distancePerKm = quantityFuel * 100 / 8                   // цієї також. Я не розумію що це
 
 if ((distancePerKm === userDistance) || (distancePerKm > userDistance)) {
     alert(`There is enough fuel`)
