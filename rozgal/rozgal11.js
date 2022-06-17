@@ -11,11 +11,11 @@
 // -	пила.
 //  Вивести на екран назву товару, яку вибрав користувач.
 
-const goodsStore = parseInt(prompt(" Choose a store: 1. Home Appliances  2.Instruments"))
-let storeDeraptment;
-if (goodsStore === 1) {
-    storeDeraptment = parseInt(prompt(" Select from the list: \n1. TV\n2. Iron\n3. Tablet"))
-    switch (storeDeraptment) {
+const storeDeraptment = parseInt(prompt(" Choose a store: 1. Home Appliances  2.Instruments"))
+let chosenGoods;
+if (storeDeraptment === 1) {
+    chosenGoods = parseInt(prompt(" Select from the list: \n1. TV\n2. Iron\n3. Tablet"))
+    switch (chosenGoods) {
         case 1:
             alert("TV");
             break;
@@ -30,9 +30,9 @@ if (goodsStore === 1) {
 
     }
 }
-else if (goodsStore === 2) {
-    storeDeraptment = parseInt(prompt(" Select from the list: \n1.Shovel\n2.Rake\n3.Broom\n4.Saw"))
-    switch (storeDeraptment) {
+else if (storeDeraptment === 2) {
+    chosenGoods = parseInt(prompt(" Select from the list: \n1.Shovel\n2.Rake\n3.Broom\n4.Saw"))
+    switch (chosenGoods) {
         case 1:
             alert("Shovel");
             break;

@@ -5,12 +5,13 @@
 
 
 
-const quantityFuel = parseFloat(prompt(" How much fuel do you have? ?", ""));
+const availableFuelCount = parseFloat(prompt(" How much fuel do you have? ?", ""));
 const litersOfFuelPerKm = parseFloat(prompt(" How many liters of fuel per 100 km?", ""));
 const distanceToBeCovered = parseFloat(prompt(" What is the distance?", "")); 
-const totalAmountOfFuel = quantityFuel * 100 / 8                  // краще визначити на скільки кілометрів вистачить того бензу, що є в юзера
+const possibleDistance = availableFuelCount * 100 / litersOfFuelPerKm                  // краще визначити на скільки кілометрів вистачить того бензу, що є в юзера
 
-if ((totalAmountOfFuel === distanceToBeCovered) || (totalAmountOfFuel > distanceToBeCovered)) {
+// if ((possibleDistance === distanceToBeCovered) || (possibleDistance > distanceToBeCovered)) {
+if (possibleDistance >= distanceToBeCovered) {
     alert(`There is enough fuel`)
 }
 
