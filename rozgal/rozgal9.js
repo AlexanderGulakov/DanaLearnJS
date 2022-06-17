@@ -25,16 +25,16 @@ else if (firstChildAmountRedPoppy < secondChildAmountRedPoppy &&
     firstChildAmountSquirrel < secondChildAmountSquirrel) {
     alert("Dana has more of each type of candy")
 }
-// if (firstChildAmountRedPoppy && firstChildAmountHazel > secondChildAmountRedPoppy && secondChildAmountHazel ||
-//     firstChildAmountRedPoppy && firstChildAmountSquirrel > secondChildAmountRedPoppy && secondChildAmountSquirrel ||
-//     firstChildAmountHazel && secondChildAmountSquirrel > secondChildAmountHazel && secondChildAmountSquirrel) {
-//     alert("Sasha has a larger number of two types of candies")
-// }
-// else  if (firstChildAmountRedPoppy && firstChildAmountHazel < secondChildAmountRedPoppy && secondChildAmountHazel ||
-//     firstChildAmountRedPoppy && firstChildAmountSquirrel < secondChildAmountRedPoppy && secondChildAmountSquirrel ||
-//     firstChildAmountHazel && secondChildAmountSquirrel < secondChildAmountHazel && secondChildAmountSquirrel) {
-//         alert("Dana has a larger number of two types of candies")
-    // }
+if ((firstChildAmountRedPoppy && firstChildAmountHazel > secondChildAmountRedPoppy && secondChildAmountHazel )||
+    (firstChildAmountRedPoppy && firstChildAmountSquirrel > secondChildAmountRedPoppy && secondChildAmountSquirrel) ||
+    (firstChildAmountHazel && secondChildAmountSquirrel > secondChildAmountHazel && secondChildAmountSquirrel)) {
+    alert("Sasha has a larger number of two types of candies")
+}
+   if ((firstChildAmountRedPoppy && firstChildAmountHazel < secondChildAmountRedPoppy && secondChildAmountHazel) ||
+    (firstChildAmountRedPoppy && firstChildAmountSquirrel < secondChildAmountRedPoppy && secondChildAmountSquirrel) ||
+    (firstChildAmountHazel && secondChildAmountSquirrel < secondChildAmountHazel && secondChildAmountSquirrel)) {
+        alert("Dana has a larger number of two types of candies")
+    }
     if (firstChildAmountRedPoppy === secondChildAmountRedPoppy &&
         firstChildAmountHazel === secondChildAmountHazel &&
         firstChildAmountSquirrel === secondChildAmountSquirrel){
@@ -43,3 +43,4 @@ else if (firstChildAmountRedPoppy < secondChildAmountRedPoppy &&
         }
 
 
+// else ????
