@@ -14,13 +14,30 @@ switch (userNumber) {
         alert("Paper");
         break;
     default: alert("wrong number");
-
 }
-const randomNumberComp = Math.ceil(Math.random() * 3); 
-alert (`random number = ${randomNumberComp}`);
+const randomNumberComp = Math.ceil(Math.random() * 3);
 
-if (randomNumberComp===1 && ){
-    alert("Paper");
+if (userNumber === 1 && randomNumberComp === 1 || userNumber === 2 && randomNumberComp === 2 || userNumber === 3 && randomNumberComp === 3) {
+    alert("Draw");
 }
 
- 
+else if (userNumber === 1 && randomNumberComp === 2 || userNumber === 2 && randomNumberComp === 3 || userNumber === 3 && randomNumberComp === 1) {
+    alert("Winner")
+
+}
+else {
+
+    alert("losing");
+}
+
+switch (randomNumberComp) {
+    case 1:
+        alert("Random number = Stone");
+        break;
+    case 2:
+        alert("Random number = Scissors");
+        break;
+    case 3:
+        alert("Random number = Paper");
+        break;
+}
