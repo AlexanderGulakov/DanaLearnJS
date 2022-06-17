@@ -6,11 +6,11 @@
 
 
 const quantityFuel = parseFloat(prompt(" How much fuel do you have? ?", ""));
-const quantityLiters = parseFloat(prompt(" How many liters of fuel per 100 km?", "")); // назва змінної лайно
-const userDistance = parseFloat(prompt(" What is the distance?", "")); // цієї також
-const distancePerKm = quantityFuel * 100 / 8                   // цієї також. Я не розумію що це
+const litersOfFuelPerKm = parseFloat(prompt(" How many liters of fuel per 100 km?", ""));
+const distanceToBeCovered = parseFloat(prompt(" What is the distance?", "")); 
+const totalAmountOfFuel = quantityFuel * 100 / 8                  // краще визначити на скільки кілометрів вистачить того бензу, що є в юзера
 
-if ((distancePerKm === userDistance) || (distancePerKm > userDistance)) {
+if ((totalAmountOfFuel === distanceToBeCovered) || (totalAmountOfFuel > distanceToBeCovered)) {
     alert(`There is enough fuel`)
 }
 
