@@ -1,20 +1,13 @@
-// Формування накладної. Вводиться назва товару, кількість, ціна і рік.  
-// Значення року вводиться користувачем або ж дорівнює 2017 (у випадку, якщо користувач не ввів значення). Перевірити коректність введених даних . У випадку некоректності вивести відповідне повідомлення.
-// ===========================
+// На роботу компаніє приймає працівників від 32 до 45 років. 
+// З клавіатури вводиться вік претендента. 
+// З’ясувати, чи може він бути прийнятим на роботу.
 
+const ageOfTheCandidate = parseInt(prompt("Write your age "));
 
-
-const productName = prompt("Write the name of the product ");
-const quantity = parseInt(prompt("Write the quantity"));
-const price = parseFloat(prompt("Enter your price"));
-const year = parseInt(prompt("Write a year")) || 2022;
-
-if (!productName || !quantity || !price) {
-    alert(`The data entered is incorrect`)
+if (ageOfTheCandidate > 31 && ageOfTheCandidate < 46) {
+    alert(`You are accepted.`)
 }
 
 else {
-    alert(`OK `)
+    alert(`You don't fit.`)
 }
-
-

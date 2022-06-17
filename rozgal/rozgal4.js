@@ -1,55 +1,21 @@
-// З клавіатури вводиться назва категорії водія.
-//  Вивести на екран назву транспортного засобу, яким він може керувати
+// 4. З клавіатури вводиться кількість балів.
+//  Вивести на екран оцінку (задовільно, добре чи відмінно).
 
-let userCategory = prompt( "Write your category ");
-userCategory = userCategory.toUpperCase();
-let result ;
-switch (userCategory){
 
-    case `A`: result = "Motorcycle";
-    break;
-    case `B`: result = "Car(up to 3500 kg)";
-    break;
-    case `C`: result = "Car(over 3500 kg)";
-    break;
-    case `D`: result = "Bus";
-    break;
-    case `E`: result = "Transportation of trailers";
-    break;
-    default: result = " Wrong category";
+const score = parseInt(prompt("Enter your score", ""));
+let result;
+switch (score) {
+    case 1: result = "You are very stupid";
+        break;
+    case 2: result = "You're still stupid";
+        break;
+    case 3: result = "It's better";
+        break;
+    case 4: result = "It's much better";
+        break;
+    case 5: result = "Well done";
+        break;
+    default: result = "The score is incorrect. Don't fool me";
+
 }
 alert(result);
-
-
-
-
-
-
-// const userCategory = prompt( "Write your category ");
-
-// if(userCategory === 'A' || userCategory === 'a') 
-// {   
-//      alert(`Motorcycle`);
-// }
-
-// else if(userCategory === 'B' || userCategory === 'b') {
-//      alert(`Car(up to 3500 kg)`);
-// }
-
-// else if(userCategory === 'C' || userCategory === 'c') {
-//     alert(`Car(over 3500 kg)`);
-// }
-// else if(userCategory === 'D' || userCategory === 'd' ) {
-//     alert(`Bus`);
-// }
-
-// else if(userCategory === 'E' || userCategory === 'e' ) {
-//     alert(`Transportation of trailers`);
-// }
- 
-// else 
-// {
-//     alert(`Wrong category`);  
-// }
- 
-

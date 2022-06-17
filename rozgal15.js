@@ -19,4 +19,8 @@ switch (userNumber) {
 const randomNumberComp = Math.ceil(Math.random() * 3); 
 alert (`random number = ${randomNumberComp}`);
 
+if (randomNumberComp===1 && ){
+    alert("Paper");
+}
+
  
