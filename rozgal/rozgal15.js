@@ -17,7 +17,7 @@ switch (userNumber) {
 }
 const randomNumberComp = Math.ceil(Math.random() * 3);
 
-if (userNumber === 1 && randomNumberComp === 1 || userNumber === 2 && randomNumberComp === 2 || userNumber === 3 && randomNumberComp === 3) {
+if (userNumber ===  randomNumberComp ) {
     alert("Draw");
 }
 
