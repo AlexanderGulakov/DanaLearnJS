@@ -10,33 +10,25 @@
 // то корабель пошкоджено (про це повідомляємо користувача).
 // За два постріли спробувати потопити корабель.
 
-const shipsPosition = Math.ceil(Math.random() * 5);   
-let shotAtShip = parseInt(prompt(" Enter the square number")); 
+const shipsPosition = Math.ceil(Math.random() * 5);
+let shotAtShip = parseInt(prompt(" Enter the square number"));
+
 if (shotAtShip === shipsPosition) {
     alert(`Well done. You sank the ship. You win. Random Number =  ${shipsPosition}`)
 }
-
-else if( Math.abs(shotAtShip - shipsPosition) === 1 ){
-    shotAtShip = parseInt(prompt("The ship is damaged. Try again. Enter the square number"))
-    if (shotAtShip === shipsPosition) {
-        alert(`Well done. You sank the ship. You win. Random Number = ${shipsPosition} `)
-    }
-    
-    else if (shotAtShip != shipsPosition) {
-        alert(`You lost. Random Number =  ${shipsPosition}`)
-    }
-}
-
 else {
-    alert(`You lost. Random Number =  ${shipsPosition}`)
+    if (Math.abs(shotAtShip - shipsPosition) === 1) {
+        alert("The ship is damaged.") 
+    }
+    shotAtShip = parseInt(prompt("Try again. Enter the square number"))
+    
+    if (shotAtShip === shipsPosition) {
+        alert(`Well done. You sank the ship. You win. Random Number =  ${shipsPosition}`)
+    }
+    else {
+            alert(`You lost.Random Number = ${ shipsPosition } `)
+    }
 }
 
 
 
-
-// ((shotAtShip - 1) === shipsPosition ||
-// //     (shotAtShip + 1) === shipsPosition)
-
-// Math.abs(shotAtShip -shipsPosition)===1
-    
- 
