@@ -24,23 +24,25 @@ else {
         alert("The ship is damaged.")
     }
     shotAtShip = parseInt(prompt(`Try again. Enter the square number`))
-    shipsPosition = Math.floor(Math.random() * (1 - (-1))) + 1
-    console.log('ships position', shipsPosition);
-
-    if (shipsPosition ) {
-        shipsPosition = (fieldLength + shipsPosition) % fieldLength + 1
-        console.log('ships position', shipsPosition);
+    let secondshipsPosition = Math.random() 
+    if(secondshipsPosition > 0 && secondshipsPosition < 0.50) {
+        shipsPosition = shipsPosition + Math.ceil(secondshipsPosition)
+    console.log('ships position+', shipsPosition);
     }
-     else if (shipsPosition < 1) {
-        shipsPosition = fieldLength
-        console.log('ships position', shipsPosition);
+     else if (secondshipsPosition > 0.50 && secondshipsPosition<  1)
+    {
+      shipsPosition = shipsPosition - Math.ceil(secondshipsPosition)
+      console.log('ships position-', shipsPosition);
     }
-    // if else {
-    //     shipsPosition = shipsPosition - 1;
-    //     console.log('ships position', shipsPosition);
+      if (shipsPosition > 5) {
+        shipsPosition =1
+        console.log('ships position3', shipsPosition);
     }
-    // Math.floor(Math.random() * (max - min)) + min;
-    // shipsPosition = (5 + shipsPosition ) % 5 + 1
+    else if (shipsPosition < 1) {
+        shipsPosition = 5
+        console.log('ships position3', shipsPosition);
+    }
+    }
     if (shotAtShip === shipsPosition) {
         alert(`Well done. You sank the ship. You win. Random Number =  ${shipsPosition}`)
     }
@@ -50,39 +52,28 @@ else {
     else {
         alert(`You lost.Random Number = ${shipsPosition} `)
     }
-}
 
 
+// / 
+// const shipsPosition = Math.ceil(Math.random() * 5);
+// let shotAtShip = parseInt(prompt(" Enter the square number"));
 
-
-
-
-
-
-
-// // // return Math.floor(Math.random() * (max - min)) + min;
-// else if (Math.abs(shotAtShip - shipsPosition) === 1) {
-//     shipsPosition = Math.floor(Math.random() * (1 - (-1))) + 1;
-//     shotAtShip = parseInt(prompt("The ship is damaged. Try again. Enter the square number"))
-
+// if (shotAtShip === shipsPosition) {
+//     alert(`Well done. You sank the ship. You win. Random Number =  ${shipsPosition}`)
+// // }
+// else {
+//     if (Math.abs(shotAtShip - shipsPosition) === 1) {
+//         alert("The ship is damaged.") 
+//     }
+//     shotAtShip = parseInt(prompt("Try again. Enter the square number"))
+    
 //     if (shotAtShip === shipsPosition) {
-//         alert(`Well done. You sank the ship. You win. Random Number = ${shipsPosition} `)
+//         alert(`Well done. You sank the ship. You win. Random Number =  ${shipsPosition}`)
 //     }
-//     if (shotAtShip != shipsPosition) {
-//         shotAtShip = parseInt(prompt("  Try again. Enter the square number"))
-//     }
-
-//     if ((Math.abs(shotAtShip - shipsPosition) === 1)) {
-//         alert(`Well done. You sank the ship. You win. Random Number = ${shipsPosition} `)
-//     }
-//     else if (shotAtShip != shipsPosition) {
-//         alert(`You lost. Random Number =  ${shipsPosition}`)
+//     else {
+//             alert(`You lost.Random Number = ${ shipsPosition } `)
 //     }
 // }
 
-
-
-
-
-
-
+// Math.floor(Math.random() * (max - min)) + min;
+    // shipsPosition = (5 + shipsPosition ) % 5 + 1
