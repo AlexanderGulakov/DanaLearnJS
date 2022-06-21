@@ -19,40 +19,42 @@ console.log('shot at ship', shotAtShip)
 alert(`Random Number =  ${shotAtShip}`)
 
 if (shotAtShip === shipsPosition) {
-    alert(`Well done. You sank the ship. You win.`)
+    alert(`Well done. You sank the ship. You win.`) // ти управляєш кораблем, диверсант? )
 }
 else {
     if (Math.abs(shotAtShip - shipsPosition) === 1) {
         alert("The ship is damaged.")
     }
     changeShipPosition = parseInt(prompt(" Enter the action that will move the ship one cell forward or backward + or -"))
+
     if (changeShipPosition = "+") {
-        shipsPosition = shipsPosition + 1
+        shipsPosition = shipsPosition + 1 // тут треба зробити з остачею
         console.log('ships position + ', shipsPosition)
     }
-    else if (changeShipPosition = "-") {
+    else if (changeShipPosition = "-") { // для чого тут перевірка?
         shipsPosition = shipsPosition - 1
         console.log('ships position - ', shipsPosition)
     }
-    if (shipsPosition > 5) {
-        shipsPosition = 1
-        console.log('ships position >5 ', shipsPosition)
-    }
-    else if (shipsPosition < 1) {
-        shipsPosition = 5
-        console.log('ships position <1 ', shipsPosition)
-    }
+
+    // if (shipsPosition > 5) { ця перевірка не потрібна, остача вирішить цю проблему
+    //     shipsPosition = 1
+    //     console.log('ships position >5 ', shipsPosition)
+    // }
+    // else if (shipsPosition < 1) {   // це треба обраховувати в елсі
+    //     shipsPosition = 5 
+    //     console.log('ships position <1 ', shipsPosition)
+    // }
     shotAtShip = Math.ceil(Math.random() * 5)
     alert(`Random Number =  ${shotAtShip}`)
     console.log('random number2 ', shotAtShip)
 
     if (shotAtShip === shipsPosition) {
-        alert(`Well done. You sank the ship. You win.`)
+        alert(`Well done. You sank the ship. You win.`) // диверсант? ))
     }
     else if (Math.abs(shotAtShip - shipsPosition) === 1) {
-        alert(`The ship is damaged. You win. `)
+        alert(`The ship is damaged. You win. `) // ще один? )
     }
     else {
-        alert(`You lost. `)
+        alert(`You lost. `) // диверсант програв )
     }
 }

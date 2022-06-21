@@ -23,26 +23,30 @@ else {
     if (Math.abs(shotAtShip - shipsPosition) === 1) {
         alert("The ship is damaged.")
     }
+
     shotAtShip = parseInt(prompt(`Try again. Enter the square number`))
-    let changeShipPosition = Math.random() 
-    if(changeShipPosition > 0 && changeShipPosition < 0.50) {
-        shipsPosition = shipsPosition + Math.ceil(changeShipPosition)
-    console.log('ships position+', shipsPosition);
+    let changeShipPosition = Math.random()
+    
+    if (changeShipPosition > 0 && changeShipPosition < 0.50) { // а нащо тут більше 0 ? )
+        shipsPosition = shipsPosition + Math.ceil(changeShipPosition)  // зміщення вправо можна зробити з остачею від ділення і тоді не треба буде 
+                                                                       //додаткових перевірок, навіщо Math.ceil(changeShipPosition)
+        console.log('ships position+', shipsPosition);
     }
-     else if (changeShipPosition > 0.50 && changeShipPosition<  1)
-    {
-      shipsPosition = shipsPosition - Math.ceil(changeShipPosition)
-      console.log('ships position-', shipsPosition);
+    else if (changeShipPosition > 0.50 && changeShipPosition < 1) { // що буде, якщо буде 0.5 або 1 . І взагалі нащо тут елс іф, якщо можна просто елс
+        shipsPosition = shipsPosition - Math.ceil(changeShipPosition) // навіщо Math.ceil(changeShipPosition)
+        console.log('ships position-', shipsPosition);
     }
-      if (shipsPosition > 5) {
-        shipsPosition =1
-        console.log('ships position3', shipsPosition);
-    }
-    else if (shipsPosition < 1) {
+    
+    // if (shipsPosition > 5) {         це не треба буде якщо буде остача на рух вправо
+    //     shipsPosition = 1
+    //     console.log('ships position3', shipsPosition);
+    // }
+
+    if (shipsPosition < 1) { // цю перевірку можна робити в else при визначенні нової позиції
         shipsPosition = 5
         console.log('ships position3', shipsPosition);
     }
-   
+
     if (shotAtShip === shipsPosition) {
         alert(`Well done. You sank the ship. You win. Random Number =  ${shipsPosition}`)
     }
