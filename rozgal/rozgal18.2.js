@@ -13,34 +13,38 @@
 
 let shipsPosition = parseInt(prompt(" Enter the position of the ship"))
 console.log('ships position', shipsPosition)
-// const fieldLength = 5
+const fieldLength = 5
+const shiftShipPosition = 1
 let shotAtShip = Math.ceil(Math.random() * 5)
 console.log('shot at ship', shotAtShip)
 alert(`Random Number =  ${shotAtShip}`)
 
 if (shotAtShip === shipsPosition) {
-    alert(`Well done. You sank the ship. You win.`) // ти управляєш кораблем, диверсант? )
+    alert(`The computer sank the ship.`) // ти управляєш кораблем, диверсант? )
 }
 else {
-    if (Math.abs(shotAtShip - shipsPosition) === 1) {
+    if (Math.abs(shotAtShip - shipsPosition) === shiftShipPosition) {
         alert("The ship is damaged.")
     }
     changeShipPosition = parseInt(prompt(" Enter the action that will move the ship one cell forward or backward + or -"))
 
     if (changeShipPosition = "+") {
-        shipsPosition = shipsPosition + 1 // тут треба зробити з остачею
+        shipsPosition =  shipsPosition % fieldLength + shiftShipPosition  // тут треба зробити з остачею
         console.log('ships position + ', shipsPosition)
     }
-    else if (changeShipPosition = "-") { // для чого тут перевірка?
+    else {                                                      // для чого тут перевірка?
         shipsPosition = shipsPosition - 1
         console.log('ships position - ', shipsPosition)
+        if (shipsPosition < 1) {
+            shipsPosition = 5
+            console.log('ships position <1 ', shipsPosition)
+        }
     }
-
     // if (shipsPosition > 5) { ця перевірка не потрібна, остача вирішить цю проблему
     //     shipsPosition = 1
     //     console.log('ships position >5 ', shipsPosition)
     // }
-    // else if (shipsPosition < 1) {   // це треба обраховувати в елсі
+    // else if ( {   // це треба обраховувати в елсі
     //     shipsPosition = 5 
     //     console.log('ships position <1 ', shipsPosition)
     // }
@@ -49,12 +53,12 @@ else {
     console.log('random number2 ', shotAtShip)
 
     if (shotAtShip === shipsPosition) {
-        alert(`Well done. You sank the ship. You win.`) // диверсант? ))
+        alert(`The computer sank the ship`) // диверсант? ))
     }
     else if (Math.abs(shotAtShip - shipsPosition) === 1) {
-        alert(`The ship is damaged. You win. `) // ще один? )
+        alert(`The ship is damaged.The computer won. `) // ще один? )
     }
     else {
-        alert(`You lost. `) // диверсант програв )
+        alert(`The computer lost `) // диверсант програв )
     }
 }
