@@ -2,20 +2,49 @@
 // протягом якогось із перших 3 уроків (початок о 8.30).  З’ясувати, який із трьох триває урок.
 
 
-const yourHour = parseFloat(prompt("Enter your time (Hour)", ""));
-const yourMinute= parseFloat(prompt("Enter your time (Minute)", ""));
+const userActualHour = parseFloat(prompt("Enter your time (Hour)", ""))
+const userActualMinute = parseFloat(prompt("Enter your time (Minute)", ""))
+const hourPerMinute = 60
+const totalUserTime = (userActualHour * hourPerMinute) + userActualMinute
+const startFirstLesson = 8 * hourPerMinute + 30
+const endFirstLesson = 9 * hourPerMinute + 15
+const startSecondLesson = 9 * hourPerMinute + 25
+const endSecondLesson = 10 * hourPerMinute + 10
+const startThirdLesson = 10 * hourPerMinute + 20
+const endThirdLesson = 11 * hourPerMinute + 5
 
-
-
-
-
-if( )
-{
-   
-    message = `First Lesson`; 
+if (totalUserTime >= startFirstLesson && totalUserTime <= endFirstLesson) {
+    alert(`First Lesson`)
+    console.log('first lesson', totalUserTime)
+}
+else if (totalUserTime >= startSecondLesson && totalUserTime <= endSecondLesson) {
+    alert(`Second Lesson`)
+    console.log('second lesson', totalUserTime)
+}
+else {
+    if (totalUserTime >= startThirdLesson && totalUserTime <= endThirdLesson) {
+        alert(`Third Lesson`)
+        console.log('third lesson', totalUserTime)
+    }
+    else if (totalUserTime > endFirstLesson && totalUserTime < startSecondLesson) {
+        alert(`School break`)
+        console.log('break1', totalUserTime)
+    }
+    else if (totalUserTime > endSecondLesson && totalUserTime < startThirdLesson) {
+        alert(`School break`)
+        console.log('break2', totalUserTime)
+    }
+    else {
+        alert(`The lesson does not continue now`)
+    }
 }
 
-alert (message);
+
+
+
+
+
+
 
 
 
@@ -50,4 +79,3 @@ alert (message);
 //     message = `You have entered the wrong age`;
 // }
 // alert(message);
- 
