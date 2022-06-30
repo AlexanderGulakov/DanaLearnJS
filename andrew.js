@@ -1,22 +1,13 @@
-/*Задача 1. Вивести на екран рядок тексту
-а а. . . а с с . . . с
-У рядку 37 букв «а» і 10 букв «с»*/
+for (let i = 0; i < 10; i = i+2) {
+  // i = i + 2 
+  console.log(i)
+    // for (let j = -1; j <= i; j + 2) {
 
-let firstLetter = 'a';
+    //     document.write(`${i + 1}`);
 
-let secondLetter = 'c';
+    // }
 
-let lettersSum;
+    document.write('<br>');
 
-for (let numberForCount = 0; numberForCount < 36; numberForCount++) {
-    document.write('a');
 }
-
-
-
-for (let anotherNumberForCount = 0; anotherNumberForCount < 9; anotherNumberForCount++) {
-  document.write('c');
-}
-
-
 
