@@ -10,14 +10,28 @@
 // 9.	кількість трицифрових;
 // 10.	добуток кратних 5;
 
- 
 
-for (let i = 0; i<= j; i++){
-  let j = prompt(parseInt("Enter a number"," "))
-         document.write( i);
-
-    }
+ let quantity = 0;
+let evenNumber;
+let userNumber = prompt("Enter a number", " ")
+console.log('user number', userNumber)
 
 
+for (; userNumber != null;) { // тобі взагалі і тут треба? почитай методичку - там пише, що цикл може бути взагалі пустий наприклад for (;;), або відсутня одна з його частин. Умова тут точно потрібна, а от все інше хз
+  if (userNumber % 2 === 0) {
+    quantity = quantity   
+    document.write(userNumber);
+  }
+  userNumber = prompt("Enter a number", " ") // якщо вводити тільки тут - то цикл не буде знати чи ця змінна буде відповідати умові при першому введенні
+}
 
- 
+
+
+    // for (var s=0,k=0,x=prompt('Введіть число','');x!=null;k++){
+    //   s=s+(+x);
+    //     x=prompt('Введіть число','');
+    //   } 
+
+
+
+
