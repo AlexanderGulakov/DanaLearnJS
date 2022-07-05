@@ -19,7 +19,10 @@ let sumPositiveNumbers = 0                   // сума додатніх
 let quantityPositiveNumbers = 0              // кількість додатніх
 let biggestNegativeNumber = 0                // найбільше від’ємне;  (Можна записати -Infinity /Це найменше відємне число. Перевірка === 0 не буде потрібна) )
 let quantityNumbersBiggerFirstNumber = 0    //	кількість більших за перше число;
-let firstUserNumber = 0                   
+let firstUserNumber = 0                     // перше число    
+let quantityThreeDigitNumber = 0             // кількість трицифрових;
+let productNumbersMultiplesOfFive = 0         // добуток кратних 5;
+
 
 let userNumber = prompt("Enter a number", " ")
 console.log('user number', userNumber)
@@ -63,24 +66,43 @@ for (; userNumber !== null;) { // тобі взагалі і тут треба? 
   }
 
   if (firstUserNumber === 0) {
-     firstUserNumber = userNumber }
-     console.log('first user number=', firstUserNumber )
-
-  if (userNumber > firstUserNumber) {
-    quantityNumbersBiggerFirstNumber = quantityNumbersBiggerFirstNumber + 1   //кількість більших за перше число;
-    console.log('quantityNumbersBiggerFirstNumber=', quantityNumbersBiggerFirstNumber )
+    firstUserNumber = userNumber
   }
+  console.log('first user number=', firstUserNumber)
+
+  if (firstUserNumber < userNumber) {
+    quantityNumbersBiggerFirstNumber = quantityNumbersBiggerFirstNumber + 1   //кількість більших за перше число;
+    console.log('quantityNumbersBiggerFirstNumber=', quantityNumbersBiggerFirstNumber)
+  }
+
+
+  if (userNumber > 99 && userNumber < 999 || userNumber < - 99 && userNumber > -999) {
+    quantityThreeDigitNumber = quantityThreeDigitNumber + 1      // кількість трицифрових;
+  }
+
+  if (userNumber % 5 === 0) {
+    console.log('%5=', userNumber)
+    if (productNumbersMultiplesOfFive === 0) {
+      productNumbersMultiplesOfFive = 1
+    }
+    productNumbersMultiplesOfFive = productNumbersMultiplesOfFive * (+userNumber)     // добуток кратних 5;
+    console.log('product numbers multiples of five =', productNumbersMultiplesOfFive)
+  }
+
 
   userNumber = prompt("Enter a number", " ") // якщо вводити тільки тут - то цикл не буде знати чи ця змінна буде відповідати умові при першому введенні
 }
 
 document.write(` Quantity Even Numbers = ${quantityEvenNumbers} `);       //кількість парних; 
 document.write(`The product of odd numbers = ${productOddNumbers} `);   //	добуток непарних;
-document.write(`The sum of two digit numbers = ${sumTwoDigitNumbers} `);    //сума двоцифрових;
+document.write(`The sum of two digit numbers = ${sumTwoDigitNumbers} 
+`);    //сума двоцифрових;
 document.write(`The arithmetic mean of positive numbers = ${arithmeticMeanPositiveNumbers} `);    //середнє арифметичне додатних;
 document.write(`The biggest negative numbers = ${biggestNegativeNumber} `);    //найбільше від’ємне;
-document.write(`The quantity of numbers bigger than the first number = ${quantityNumbersBiggerFirstNumber} `);    //найбільше від’ємне;
-
+document.write(`The quantity of numbers bigger than the first number = ${quantityNumbersBiggerFirstNumber}
+ `);    //найбільше від’ємне;
+document.write(`The quantity of  three digit numbers = ${quantityThreeDigitNumber} `);     // кількість трицифрових;
+document.write(`The product of numbers that are multiples of five  = ${productNumbersMultiplesOfFive} `);     // кількість трицифрових;
 
 document.write("</pre>");
 
