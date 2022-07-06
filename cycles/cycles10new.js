@@ -77,13 +77,13 @@ for (; userNumber !== null;) {
         sumPositiveNumbers = sumPositiveNumbers + userNumber
         console.log('sum of positive numbers=', sumPositiveNumbers)
         quantityPositiveNumbers = quantityPositiveNumbers + 1
-        console.log('quantity of positive numbers=', quantityPositiveNumbers)      
+        console.log('quantity of positive numbers=', quantityPositiveNumbers)
         // arithmeticMeanPositiveNumbers = sumPositiveNumbers / quantityPositiveNumbers //|	середнє арифметичне додатних (прорахунок внизу)
-        
+
     }
     if (userNumber > 99 && userNumber < 999 || userNumber < - 99 && userNumber > -999) {
         quantityThreeDigitNumber = quantityThreeDigitNumber + 1                    //| кількість трицифрових;
-    }  
+    }
     if (userNumber % 5 === 0) {
         console.log('%5=', userNumber)
         if (productNumbersMultiplesOfFive === 0) {
@@ -92,12 +92,13 @@ for (; userNumber !== null;) {
         productNumbersMultiplesOfFive = productNumbersMultiplesOfFive * userNumber
         console.log('product numbers multiples of five =', productNumbersMultiplesOfFive)
     }
-    arithmeticMeanPositiveNumbers = sumPositiveNumbers / quantityPositiveNumbers   //|	середнє арифметичне додатних 
-    console.log('arithmetic mean of positive numbers=', arithmeticMeanPositiveNumbers) 
-    geometricMeanPositiveNumbers = Math.sqrt(productPositiveNumbers)               //| корінь з productPositiveNumbers= середнє геометричне додатних;
+
 
     userNumber = prompt("Enter a number", " ")
 }
+arithmeticMeanPositiveNumbers = sumPositiveNumbers / quantityPositiveNumbers   //|	середнє арифметичне додатних 
+console.log('arithmetic mean of positive numbers=', arithmeticMeanPositiveNumbers)
+geometricMeanPositiveNumbers = Math.sqrt(productPositiveNumbers)               //| корінь з productPositiveNumbers= середнє геометричне додатних;
 
 document.write(` Quantity Even Numbers = ${quantityEvenNumbers} `);                                            //| кількість парних; 
 document.write(`<br>`)
