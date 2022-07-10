@@ -1,26 +1,16 @@
-/*28. З клавіатури вводяться поступово числа. Знайти два найбільші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5.*/
-
-let usersNumberSecond;
-let secondBiggestNumber = 0;
-let firstBiggestNumber = +prompt(`Enter number`) || 0;
-do {
-  usersNumberSecond = +prompt(`Enter number`) || 6;
-  if (!secondBiggestNumber) {
-      secondBiggestNumber = usersNumberSecond;
-  };
-  if (usersNumberSecond > firstBiggestNumber) {
-      if (usersNumberSecond > secondBiggestNumber) {
-          if (secondBiggestNumber > firstBiggestNumber) {
-              firstBiggestNumber = usersNumberSecond;
-              continue;
-          }
-          if (secondBiggestNumber < firstBiggestNumber) {
-              secondBiggestNumber = usersNumberSecond;
-          };
-      }
-      if (usersNumberSecond < secondBiggestNumber) {
-          firstBiggestNumber = usersNumberSecond;
-      };
-  };
-    console.log("first", firstBiggestNumber, "second", secondBiggestNumber);
-} while (Math.abs(secondBiggestNumber - firstBiggestNumber) > 5);
+let fieldsRow = +prompt (`Enter the width of the field`);
+let fieldsColumn = +prompt (`Enter the height of the field`);
+document.write(`<h1 text-align="center">Black Sea</h1>`);
+document.write(`<table border=3 class="center">`);
+setTimeout(() => {
+    console.log("Delayed for 1 second.");
+  }, "1000")
+for (let i = 0; i < fieldsRow; i++) {
+    document.write(`<tr">`);
+    for (let j = 0; j < fieldsColumn; j++) {
+  
+      document.write(`<td id=${i+1}${j+1} class="city"></td>`);
+    }
+    document.write(`</tr>`);
+  }
+  document.write(`</table>`);

@@ -1,14 +1,19 @@
 .city {
-    background-color: blue;
-    color: white;
-    border: 2px solid black;
-    margin: 50px;
-    padding: 50px;
-  }
-  
-.center {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  /* background-color: blue; */
+  background-image: url("sea.jfif");
+  color: white;
+  border: 2px solid black;
+  margin: 50px;
+  padding: 50px;
+}
 
-h1{text-align: center;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+h1 {
+  text-align: center;
+  margin-top: 200px;
+}
