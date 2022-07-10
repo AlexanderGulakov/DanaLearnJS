@@ -1,0 +1,14 @@
+.city {
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 50px;
+  }
+  
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+h1{text-align: center;}
