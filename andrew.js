@@ -1,48 +1,23 @@
-document.write('<pre>')
-for (let l = 0; l < 4; l++) {
-    for (let k = 3; k > l; k--) {
-        document.write(' ');
+//17. З клавіатури вводиться початкове значення суми. Поки сума є меншою за 100 додавати до неї числа, які вводяться з клавіатури.
 
+let totalValue = 100;
+
+let sum = 0;
+
+let currentValue = 0;
+
+const startingValue = parseInt(prompt('Enter starting value'));
+
+
+while (totalValue > sum) {
+
+    currentValue = parseInt(prompt('Enter some value to plus until it is less than 100'));
+    if (sum === 0) {
+        sum = startingValue + currentValue;
     }
-
-    for (let m = 0; m <= 2 * l; m++) {
-
-        document.write('0');
-
+    else {
+        sum += currentValue;
     }
-    document.write('<br>');
 }
 
-/*Задача 9. Вивести на екран
-   0
-  000
- 00000
-0000000
-   0
-  000
- 00000
-0000000
-   0
-  000
- 00000
-0000000*/
-
-document.write('<pre>')
-
-for (i = 0; i < 3; i++) {
-
-    for (let j = 0; j < 4; j++) {
-        for (k = 4; k > j; k--)
-
-            document.write(' ');
-
-        for (l = 0; l <= 2 * j; l++)
-
-            document.write('0');
-
-        document.write('<br>');
-    }
-
-}
-
-document.write('</pre>')
+document.write(sum)
