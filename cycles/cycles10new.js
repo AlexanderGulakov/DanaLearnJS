@@ -30,7 +30,6 @@ let smallestPositiveNumber = 0                 //| найменше з дода�
 let userNumber = prompt("Enter a number", " ")
 console.log('user number', userNumber)
 
-
 for (; userNumber !== null;) {
 
     userNumber = parseInt(userNumber)
