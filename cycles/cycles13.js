@@ -5,7 +5,7 @@
 let quantityOfSubjects = prompt("Enter the quantity of subjects", " ")
 // console.log('quantity of subjects', quantityOfSubjects)
 
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 1; i++) {   // ЗРОБИТИ БЕЗ ЦЬОГО ЦИКЛУ + ВИКОРИСТОВУВАТИ ЗМІННІ
     for (let j = 0; j < quantityOfSubjects; j++) {
 
         document.write(`<label for= {subject}> Subject ${j + 1} </label> <input type={text} id={subject}> <br>`);

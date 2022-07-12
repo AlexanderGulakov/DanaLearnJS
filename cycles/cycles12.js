@@ -14,7 +14,7 @@
 
 //    document.write("</pre>");
 
-
+// ДОБАВИТИ ЗМІННІ ДЛЯ КІЛЬКОСТІ РЯДКІВ І КОЛОНОК
 
 document.write('<table border="2">')
 for (let i = 0; i < 4; i++) {
