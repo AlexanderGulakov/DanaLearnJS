@@ -5,19 +5,17 @@
 let quantityOfSubjects = prompt("Enter the quantity of subjects", " ")
 // console.log('quantity of subjects', quantityOfSubjects)
 
-for (let i = 0; i < 1; i++) {   // ЗРОБИТИ БЕЗ ЦЬОГО ЦИКЛУ + ВИКОРИСТОВУВАТИ ЗМІННІ
-    for (let j = 0; j < quantityOfSubjects; j++) {
+// for (let i = 0; i < 1; i++) {   // ЗРОБИТИ БЕЗ ЦЬОГО ЦИКЛУ + ВИКОРИСТОВУВАТИ ЗМІННІ
+let quanityOfSticks = 45
+for (let j = 0; j < quantityOfSubjects; j++) {
 
-        document.write(`<label for= {subject}> Subject ${j + 1} </label> <input type={text} id={subject}> <br>`);
-        
-        document.write(`<label for= {score}> Score ${j + 1} </label> <input type={text} id={score}> <br>`);
-        for(let k= 0; k < 45; k++ )
+    document.write(`<label for= {subject}> Subject ${j + 1} </label> <input type={text} id={subject}> <br>`);
+
+    document.write(`<label for= {score}> Score ${j + 1} </label> <input type={text} id={score}> <br>`);
+    for (let k = 0; k < quanityOfSticks; k++)
         document.write("-")
-        document.write("<br>")
-    }
-   
+    document.write("<br>")
 }
- document.write("<br>")
 
 
 

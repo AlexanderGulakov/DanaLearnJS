@@ -1,23 +1,30 @@
-//17. З клавіатури вводиться початкове значення суми. Поки сума є меншою за 100 додавати до неї числа, які вводяться з клавіатури.
+/*Задача 20. На екрані виводиться меню: 
+1. Сказати «Привіт». 
+2. Сказати «Зачекай». 
+3. Сказати «До побачення». 
+4. Вихід.
+Шляхом вибору пунктів меню виводити відповідні повідомлення, поки не буде вибрано пункт номер 4.*/
 
-let totalValue = 100;
+let greetingUser = 0;
 
-let sum = 0;
+do {
+    greetingUser = parseInt(prompt('Press "1" for "Hello"; 2 for "Wait"; 3 for "Good bye"; 4 to exit'));
 
-let currentValue = 0;
-
-const startingValue = parseInt(prompt('Enter starting value'));
-
-
-while (totalValue > sum) {
-
-    currentValue = parseInt(prompt('Enter some value to plus until it is less than 100'));
-    if (sum === 0) {
-        sum = startingValue + currentValue;
+    switch (greetingUser) {
+        case 1:
+            alert('Hello, my dear friend!');
+            break
+        case 2:
+            alert('Wait, don`t leave me alone!');
+            break
+        case 3:
+            alert('Good bye, you will come back!');
+            break
+        case 4:
+            alert('Please, come again');
+            break
+        default:
+            alert('You pressed wrong number');
     }
-    else {
-        sum += currentValue;
-    }
-}
 
-document.write(sum)
+} while (greetingUser !== 4)

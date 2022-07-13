@@ -1,6 +1,5 @@
 // // Задача 12. Створити таблицю 3*4 з використанням відповідних табличних тегів.
-// let  rowTable = 4
-// let columnTable = 3
+
 
 // document.write("<pre>");
 // for (let i = 0; i < 4; i++) {
@@ -16,10 +15,14 @@
 
 // ДОБАВИТИ ЗМІННІ ДЛЯ КІЛЬКОСТІ РЯДКІВ І КОЛОНОК
 
+
+let rowTable = 4
+let columnTable = 3
+
 document.write('<table border="2">')
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < rowTable; i++) {
     document.write("<tr>");
-    for (let j = 0; j < 3; j++) {
+    for (let j = 0; j < columnTable; j++) {
         document.write("<td> Table </td>");
     }
     document.write("</tr>");
