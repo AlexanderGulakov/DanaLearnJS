@@ -10,19 +10,17 @@
 // while ( умова );
 
 let userSymbol;
-let sumString;
+let sumString = ``;
 do {
-    userSymbol = prompt("Enter a symbol")
+    userSymbol = prompt("Enter a symbol")              // ЧЕРЕЗ вайл
     console.log('symbol', userSymbol)
-    sumString = userSymbol + sumString
+    sumString = userSymbol + sumString ;
     console.log('sumstring', sumString)
-    if (userSymbol !== `a`) {
-        document.write(sumString)
-    }
-
+    // if (userSymbol === `a`) {}
+       
 }
 while (userSymbol !== `a`);
-
+ document.write(sumString)
 
 
 

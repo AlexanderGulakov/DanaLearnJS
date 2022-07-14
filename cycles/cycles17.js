@@ -5,24 +5,60 @@
 // while( умова )
 //    оператор ;
 //---------------
-// do
-// {
-//    оператор ;
-// }
-// while ( умова );
 
-let initialValueOfSum;
-let sum;
+// let userNumber;
+// let totalSum = 0;  // ЗАЙВІ ЗМІННІ, ТРЕБА СПРОСТИТИ
+// let sumUserNumber = 0;
+// let initialValueOfSum = +prompt("Enter the initial value of the amount ")     //початкове знчення суми.
+// console.log('initialValueOfSum  ', initialValueOfSum)
+// do {
+//     userNumber = +prompt("Enter the number")                                 // введені числа
+//     console.log('userNumber  ', userNumber)
+//     sumUserNumber = sumUserNumber + userNumber                              // сума введених чисел
+//     console.log('sumUserNumber  ', sumUserNumber)
+//     totalSum = initialValueOfSum + sumUserNumber                            // загальна сума= початкове значення + сума  введених чисел                         
+//     console.log('totalSum  ', totalSum)
+// }
+
+// while (totalSum < 100)
+// document.write(' Sum  of numbers = ', totalSum)
+
+
+// 5 90 10
+// 5 95 105
+
+
+
+
 let userNumber;
-initialValueOfSum = prompt("Enter the initial value of the amount ")
-while (initialValueOfSum < 100) {
-    console.log('initial Value Of The Sum', initialValueOfSum)
-    userNumber = prompt("Enter the number")
-    while  (userNumber !== null ) {
-        console.log('user number === null', userNumber)
-        sum = initialValueOfSum + userNumber
-        console.log('sum', sum)
-        document.write('Products  of numbers= ', sum);
-    }
+let totalSum = 0;  // ЗАЙВІ ЗМІННІ, ТРЕБА СПРОСТИТИ
+let sumUserNumber = 0;
+let initialValueOfSum = +prompt("Enter the initial value of the amount ")     //початкове знчення суми.
+console.log('initialValueOfSum  ', initialValueOfSum)
+do {
+
+    userNumber = +prompt("Enter the number")                                 // введені числа
+    console.log('userNumber  ', userNumber)
+    sumUserNumber = sumUserNumber + userNumber                              // сума введених чисел
+    console.log('sumUserNumber  ', sumUserNumber)
+    totalSum = initialValueOfSum + sumUserNumber                            // загальна сума= початкове значення + сума  введених чисел                         
+    console.log('totalSum  ', totalSum)
 }
+
+while (totalSum < 100)
+document.write(' Sum  of numbers = ', totalSum)
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 
