@@ -6,40 +6,38 @@
 // . . . . . . 
 // Виведення завершити коли число справа стане меншим за число зліва.
 
-// let numberN = +prompt("Enter a number", " ")                                        //| 5                |6      |7      |8
-// let numberM = +prompt("Enter a number", " ")                                        //| 12               |11     |10     |9
-// let i = 0                                                                   //| 0                |+1     |+2     |+3
-// document.write(`N = ${numberN} --- M = ${numberM} `)                                                            //| 0                |-1     |-2     |-3
-// do {                                                                              //|                  |       |       | 
-//                                                                            //|                  |       |       |
-//     i++                                                                    //| + 1              | + 2   | +3    | + 4      
-//                                                                    //| - 1              | - 2   | -3    | - 4       
-//     numberN++                                                                       //| 6                | 7     | 8     |  9        
-//     numberM--                                                                       //| 11               | 10    | 9     |  8    
-//     if (numberN < numberM) {                                                        //| 6<11             |7<10   |8<9    | 9>8                
-//         document.write(`<br>N+${i}=${numberN}--- M-${i}=${numberM}`) //| N+1=6 ---M-1= 11 |7---10 | 8---9 | ---       
+// let numberN = +prompt("Enter a number", " ")                                        
+// let numberM = +prompt("Enter a number", " ")                                        
+// let i = 0                                                                  
+// document.write(`N = ${numberN} --- M = ${numberM} `)                                                          
+// do {                                                                             
+//                                                                            
+//     i++                                                                    
+//                                                                 
+//     numberN++                                                                    
+//     numberM--                                                                        
+//     if (numberN < numberM) {                                                                    
+//         document.write(`<br>N+${i}=${numberN}--- M-${i}=${numberM}`)   
 //     }
-// }                                                                                   //|                  |       |       |
-// while (numberN < numberM)                                                           //| 6 < 11           |7< 10  | 8 < 9 |  9 > 8           
+// }                                                                                  
+// while (numberN < numberM)                                                                  
 
 
 
-
-
-let numberN = +prompt("Enter a number", " ")                                        //| 5                |6      |7      |8
-let numberM = +prompt("Enter a number", " ")                                        //| 12               |11     |10     |9
-let i = 0                                                                   //| 0                |+1     |+2     |+3
-// document.write(`N = ${numberN} --- M = ${numberM} `)                                                            //| 0                |-1     |-2     |-3
-while (numberN < numberM)   {                                                                              //|                  |       |       | 
-    document.write(`<br>N+${i}=${numberN}--- M-${i}=${numberM}`) //| N+1=6 ---M-1= 11 |7---10 | 8---9 | ---       
+let numberN = +prompt("Enter a number", " ")                                      
+let numberM = +prompt("Enter a number", " ")                                      
+let i = 0                                                                 
+// document.write(`N = ${numberN} --- M = ${numberM} `)                                                        
+while (numberN < numberM)   {                                                                             
+    document.write(`<br>N+${i}=${numberN}--- M-${i}=${numberM}`)    
     //|                  |       |       |
-    i++                                                                    //| + 1              | + 2   | +3    | + 4      
-                                                                   //| - 1              | - 2   | -3    | - 4       
-    numberN++                                                                       //| 6                | 7     | 8     |  9        
-    numberM--                                                                       //| 11               | 10    | 9     |  8    
-    // if (numberN < numberM) {                                                        //| 6<11             |7<10   |8<9    | 9>8                
+    i++                                                                    
+                                                                   
+    numberN++                                                                         
+    numberM--                                                                       
+    // if (numberN < numberM) {                                                                      
     // }
-}                                                                                   //|                  |       |       |
+}                                                                                  
    
 
 // let numberN = +prompt("Enter a number", " ")                                    //| 5                |6      |7      |8
