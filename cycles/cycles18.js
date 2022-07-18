@@ -3,25 +3,6 @@
 
 
 // let userNumber;
-// let sumEvenNumbers = 0;
-// let quantityEvenNumbers = +prompt("Enter the quantity of even number")    // загадана кількість парних чисел
-// console.log(' guessedQuantityEvenNumbers ', quantityEvenNumbers)
-
-// do {
-//     userNumber = +prompt("Enter the number")           // введені числа
-//     console.log('user number', userNumber)
-//     if (userNumber % 2 === 0) {
-//         sumEvenNumbers = sumEvenNumbers + userNumber    // визначення суми парних чисел 
-//         console.log('sumEvenNumbers ', sumEvenNumbers)
-//     }
-// }
-// while (        < quantityEvenNumbers   )
-// document.write('Sum of Even numbers= ', sumEvenNumbers);
-
-
-
-
-// let userNumber;
 // let quantityEvenNumbers = 0;
 // let sumEvenNumbers = 0;
 // let guessedQuantityEvenNumbers = +prompt("Enter the quantity of even number")    // загадана кількість парних чисел

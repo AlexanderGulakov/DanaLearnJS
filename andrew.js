@@ -1,34 +1,32 @@
-const firstRandomNumber = Math.ceil(Math.random() * 10);
+/29. З клавіатури вводяться поступово числа. Знайти два найменші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5./
 
-const secondRandomNumber = Math.ceil(Math.random() * 10);
+let currentNumber;
 
-let guessRandomNumber = 0;
+let firstSmallestNumber = +Infinity;
 
-let isGuessedFirstNumber;
+let secondSmallestNumber = 0;
 
-let isGuessedSecondNumber;
+let maxDifference = 5;
 
-let isWinCondition;
-
-let triesQty = 0;
+let isSmallestNumbersDifference;
 
 do {
+    currentNumber = parseInt(prompt('Enter some integer numbers'));
+    console.log('currentNumber', currentNumber)
 
-    guessRandomNumber = parseInt(prompt('Guess computer\'s\ two random numbers from "1" to "10"'));
-
-    if (guessRandomNumber === firstRandomNumber) { // тут можна одразу перевіряти чи воно вже не вгадане - і якщо вгадане, то не заходити
-        isGuessedFirstNumber = firstRandomNumber; // тут треба давати значення тру/фолс 
-        alert(`You have guessed random number! It is ${firstRandomNumber}`);
+    if (currentNumber < firstSmallestNumber) {
+        secondSmallestNumber = firstSmallestNumber;
+        firstSmallestNumber = currentNumber;
+        
     }
-    if (guessRandomNumber === secondRandomNumber) { // ті самі 2 коментаря
-        isGuessedSecondNumber = secondRandomNumber;
-        alert(`You have guessed another random number! It is ${secondRandomNumber}`);
+    else {
+        if (currentNumber < secondSmallestNumber) {
+            secondSmallestNumber = currentNumber;
+        }
     }
 
-    isWinCondition = (isGuessedFirstNumber === firstRandomNumber && isGuessedSecondNumber === secondRandomNumber); // це не треба тут перевіряти
+    isSmallestNumbersDifference = (Math.abs(firstSmallestNumber - secondSmallestNumber)) > maxDifference;
 
-    triesQty++;
-    
-} while (!isWinCondition) // тут треба сформулювати умову виходу на основі булевих значень, сама змінна isWinCondition не потрібна, там буде все лаконічно і без неї)
+} while (isSmallestNumbersDifference)
 
-alert(`You spent ${triesQty} tries to guess all random numbers!`)
+alert(`The smallest entered numbers are: ${firstSmallestNumber} and ${secondSmallestNumber}`)
