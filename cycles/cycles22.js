@@ -29,20 +29,45 @@ do {
             console.log('case3  ', midInterval)
             alert(midInterval)
             break;
-            default: amount = "The number is incorrect. Try again.";
+        default: amount = "The number is incorrect. Try again.";
     }
-    if (endInterval !== 3 && endInterval === (startInterval + 2) || midInterval === 1 ) {
-        console.log('if  ', midInterval)
+
+    // if (endInterval !== 3 && (startInterval + 2) === endInterval  ||  midInterval === 1) {
+    //     console.log('if  ', midInterval)
+    //     alert(` Your guessed number${midInterval}`)
+    //     break;
+    // }
+    if (endInterval !== 3 && (startInterval + 2) === endInterval ) {
         alert(` Your guessed number${midInterval}`)
         break;
     }
-    // if (midInterval === endInterval){
+    if ((startInterval + 2) === endInterval && ) {
+        alert(` Your guessed number${midInterval}`)
+        break;
+    }
+
+    // if ((startInterval + 1) === endInterval) {
+    //     midInterval = midInterval + 1
+    //     alert(` Your guessed number${midInterval}`)
+    //     break;
+    // }
+
+
+    //  if (endInterval !== 3 && (startInterval + 2) === endInterval || 
+    //  midInterval === 1) {
+    //     console.log('if  ', midInterval)
+    //     alert(` Your guessed number${midInterval}`)
+    //     break;
+    // }
+    // else if ( midInterval === endInterval  ){
     //     alert(` Your guessed number${midInterval}`)
     //     break;
     // }
 
 }
 while (guessedNumber !== 3)
+
+
 
 // if (guessedNumber === 1) {
 //     startInterval = midInterval
