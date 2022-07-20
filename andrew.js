@@ -1,32 +1,39 @@
-/29. З клавіатури вводяться поступово числа. Знайти два найменші числа. Ввід здійснюється до тих пір, поки різниця між такими числами є більшою за 5./
+// Тепер перша клітинка пуста. 
 
-let currentNumber;
+// Таблична візуалізація поля
 
-let firstSmallestNumber = +Infinity;
+let rowQty = parseInt(prompt('Enter rows quantity', '5')); // оголошуємо кількість колонок
+let columnQty = parseInt(prompt('Enter columns quantity', '5')); // оголошуємо кількість рядків
 
-let secondSmallestNumber = 0;
 
-let maxDifference = 5;
+document.write('<table>'); // створюємо таблицю
 
-let isSmallestNumbersDifference;
+// document.write('<tr>') // оголошуємо рядок, який огортає заголовок
 
-do {
-    currentNumber = parseInt(prompt('Enter some integer numbers'));
-    console.log('currentNumber', currentNumber)
+// for (let i = 0; i < columnQty + 1; i++) { // робим цикл з кількості колонок, які введе користувач
+//     document.write(`<td id=${'c' + i}> ${i}</td>`); // додаю нумерацію колонок
+//     let cornerCell = document.getElementById('c0'); // кутова клітинка має бути пуста
+//     cornerCell.textContent = ''; // &nbps; чомусь не спрацьовує, тому ставлю пусту строку
+// }
 
-    if (currentNumber < firstSmallestNumber) {
-        secondSmallestNumber = firstSmallestNumber;
-        firstSmallestNumber = currentNumber;
-        
+// document.write('</tr>');
+
+for (let j = 0; j <= rowQty; j++) { // рядки з введеної користувачем кількості
+    document.write('<tr>')
+    if(j===0){
+        document.write(`<td>№</td><br>`);
     }
-    else {
-        if (currentNumber < secondSmallestNumber) {
-            secondSmallestNumber = currentNumber;
+    else document.write(`<td>${j}</td><br>`);
+
+    for (let k = 0; k < columnQty; k++) {
+        if(j===0){
+            document.write(`<td id=${'c' + k}> ${k+1}</td>`);
         }
+        else document.write(`<td id=${j + 1}${k + 1}></td>`) // клітинка задаємо id з цифр рядків та колонок
     }
 
-    isSmallestNumbersDifference = (Math.abs(firstSmallestNumber - secondSmallestNumber)) > maxDifference;
+    document.write('</tr>');
+}
 
-} while (isSmallestNumbersDifference)
+document.write('</table>')
 
-alert(`The smallest entered numbers are: ${firstSmallestNumber} and ${secondSmallestNumber}`)

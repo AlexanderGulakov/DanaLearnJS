@@ -1,19 +1,23 @@
-/*32. Тир. На полі з 10 клітинок розміщують зайця. За один крок заєць може стрибати на відстань від 0 до 3 позицій у будь-якому напрямку. 
-З клавіатури вводиться позиція пострілу. Гра продовжується поки  у користувача не закінчаться патрони (кількість вводиться з клавіатури) 
-або не буде влучання. Спробуйте відоразити гру графічно.*/
+let rowQty = parseInt(prompt('Enter rows quantity', '1')); // оголошуємо кількість колонок
+let columnQty = parseInt(prompt('Enter columns quantity', '1')); // оголошуємо кількість рядків
 
-let fieldsRow = +prompt (`Enter the height of the field`);
- let fieldsColumn = +prompt (`Enter the width of the field`);
- document.write(`<table style=width:50% height:50% align=center>`); 
- document.write(
-   `<caption style=color:red; font-size:7em>The hunting</caption>`
- );
- for (let i = 0; i < fieldsRow; i++) {
-   document.write(`<tr style=height:100px >`);
-   for (let j = 0; j < fieldsColumn; j++) {
-     document.write(
-       `<td id=${i + 1}${j + 1} style=width:100px height:100px></td>`
-     );
-   }
-   document.write(`</tr>`);
- };
+document.write('<table>'); // створюємо таблицю
+
+document.write('<tr>') // оголошуємо рядок, який огортає заголовок
+
+for (let i = 0; i < columnQty; i++) { // робим цикл з кількості колонок, які введе користувач
+    document.write(`<th> ${i + 1}</th>`)
+}
+
+document.write('</tr>');
+
+for (let j = 0; j < rowQty; j++) { // рядки з введеної користувачем кількості
+    document.write('<tr>')
+    for (let k = 0; k < columnQty; k++) {
+        document.write(`<td id=${j + 1}${k + 1}></td>`) // клітинки
+    }
+    document.write(`${j + 1}. <br><br>`); // спроба пронумерувати колонки
+    document.write('</tr>');
+}
+
+document.write('</table>')
