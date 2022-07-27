@@ -2,8 +2,11 @@
 //  З клавіатури поступово вводяться координати пострілу поки корабель не буде потоплено. 
 //  Спробуйте відоразити гру графічно.
 
- 
 
-let rowTable = 5
-let columnTable = 5
- let  ShipPosition = Math.ceil(Math.random() * 5)
+ 
+let ShipPositionRow = Math.ceil(Math.random() * 5)
+let ShipPositionColumn = Math.ceil(Math.random() * 5)
+
+
+let shotAtShipRow = +prompt("A shot at the ship. Row =")
+let shotAtShipColumn = +prompt(" Column = ")
