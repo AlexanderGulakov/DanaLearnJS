@@ -1,39 +1,71 @@
-// Тепер перша клітинка пуста. 
+// 2-й 
 
-// Таблична візуалізація поля
+/*34.Спробуйте модифікувати попередню гру для випадку, коли танк також може стріляти по вашій гарматі (ваша гармата також знаходиться на цьому ж полі).*/
 
-let rowQty = parseInt(prompt('Enter rows quantity', '5')); // оголошуємо кількість колонок
-let columnQty = parseInt(prompt('Enter columns quantity', '5')); // оголошуємо кількість рядків
+alert(
+  `Hello, private! Your task is to destroy enemy tank. Pick up those Javeline.`
+);
 
+let ammoAmount = +prompt(`So you took so many javeline ammo with you => `);
+let tankPosX = Math.floor(Math.random() * fieldsLength) + 1;
+let tanksShot;
+let ownPosition;
 
-document.write('<table>'); // створюємо таблицю
-
-// document.write('<tr>') // оголошуємо рядок, який огортає заголовок
-
-// for (let i = 0; i < columnQty + 1; i++) { // робим цикл з кількості колонок, які введе користувач
-//     document.write(`<td id=${'c' + i}> ${i}</td>`); // додаю нумерацію колонок
-//     let cornerCell = document.getElementById('c0'); // кутова клітинка має бути пуста
-//     cornerCell.textContent = ''; // &nbps; чомусь не спрацьовує, тому ставлю пусту строку
-// }
-
-// document.write('</tr>');
-
-for (let j = 0; j <= rowQty; j++) { // рядки з введеної користувачем кількості
-    document.write('<tr>')
-    if(j===0){
-        document.write(`<td>№</td><br>`);
-    }
-    else document.write(`<td>${j}</td><br>`);
-
-    for (let k = 0; k < columnQty; k++) {
-        if(j===0){
-            document.write(`<td id=${'c' + k}> ${k+1}</td>`);
-        }
-        else document.write(`<td id=${j + 1}${k + 1}></td>`) // клітинка задаємо id з цифр рядків та колонок
-    }
-
-    document.write('</tr>');
+do {
+  ownPosition = +prompt(`Our position will be here (set from 1 to ${fieldsLength}):`) || 1;
 }
+while (ownPosition === tankPosX);
 
-document.write('</table>')
+let shotPosX;
+let tanksHP = 100;
+const shotDamage = 30;
 
+do {
+  if (ammoAmount === 0) {
+    alert(
+      `What a disaster, private! You condemned your brothers in arms to death.`
+    );
+    break;
+  }
+
+  do {
+    shotPosX =
+      +prompt(`You look into the scope and determine the coordinates:`) || 1;
+  } while (shotPosX > fieldsLength || shotPosX < 0);
+
+  ammoAmount--;
+
+  if (shotPosX === tankPosX) {
+    alert(
+      `Nice, private! You damaged that piece of communistic shit! Go on. You have ${ammoAmount} rounds of Javeline left.`
+    );
+    tanksHP -= shotDamage;
+    document.getElementById(`${shotPosX}`).style.backgroundColor = "red";
+  } else {
+    alert(
+      `Well, you have ${ammoAmount} rounds of Javeline left. You should try better!`
+    );
+    document.getElementById(`${shotPosX}`).style.backgroundColor = "black";
+  }
+
+  tanksShot = Math.floor(Math.random() * fieldsLength) + 1;
+  if (tanksShot === ownPosition) {
+    alert(`Oh, boy... That tank have hit in us!`);
+    break;
+  } else (alert(`Piece of shit! He trying to hit us! Missed!`));
+
+  if (tanksHP <= 0) {
+    alert(`Bulls eye! What a nice view of fireworks.`);
+    document.write(`</table>`);
+    document.getElementById(`${shotPosX}`).style.backgroundColor = "orange";
+    break;
+  } else {
+    tankPosX += -1 + Math.round(Math.random() * 2);
+
+    if (tankPosX > fieldsLength) {
+      tankPosX = tankPosX % fieldsLength;
+    } else if (tankPosX <= 0) {
+      tankPosX = fieldsLength;
+    }
+  }
+} while (tanksHP > 0);
