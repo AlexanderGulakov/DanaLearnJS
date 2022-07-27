@@ -25,49 +25,34 @@ do {
             midInterval = Math.floor((startInterval + midInterval) / 2)
             console.log('case2  ', midInterval)
             break;
-        case 3: midInterval = ` Perfectly guessed number = ${midInterval} `
+        case 3: midInterval = ` Perfectly guessed number = ${midInterval} ` 
             console.log('case3  ', midInterval)
             alert(midInterval)
-            break;
-        default: amount = "The number is incorrect. Try again.";
+            break;  
     }
-
-    // if (endInterval !== 3 && (startInterval + 2) === endInterval  ||  midInterval === 1) {
-    //     console.log('if  ', midInterval)
-    //     alert(` Your guessed number${midInterval}`)
-    //     break;
-    // }
-    if (endInterval !== 3 && (startInterval + 2) === endInterval ) {
-        alert(` Your guessed number${midInterval}`)
-        break;
-    }
-    if ((startInterval + 2) === endInterval && ) {
+    if (endInterval === 2) {
         alert(` Your guessed number${midInterval}`)
         break;
     }
 
-    // if ((startInterval + 1) === endInterval) {
-    //     midInterval = midInterval + 1
-    //     alert(` Your guessed number${midInterval}`)
-    //     break;
-    // }
-
-
-    //  if (endInterval !== 3 && (startInterval + 2) === endInterval || 
-    //  midInterval === 1) {
-    //     console.log('if  ', midInterval)
-    //     alert(` Your guessed number${midInterval}`)
-    //     break;
-    // }
-    // else if ( midInterval === endInterval  ){
-    //     alert(` Your guessed number${midInterval}`)
-    //     break;
-    // }
+    else if (startInterval === endInterval - 1) {
+        alert(` Your guessed number${endInterval}`)
+        break;
+    }
 
 }
 while (guessedNumber !== 3)
 
 
+    // if (startInterval === endInterval - 1) {
+    //     alert(` Your guessed number${endInterval}`)
+    // }
+    //   if (endInterval !== 3 && (startInterval + 2) === endInterval
+    //     || endInterval === 2) {
+    //     // ||  midInterval === 1  
+    //     alert(` Your guessed number${midInterval}`)
+    //     break;
+    // }
 
 // if (guessedNumber === 1) {
 //     startInterval = midInterval
