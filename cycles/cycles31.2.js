@@ -4,6 +4,7 @@
 
 
 
+
 let shipPositionRow = Math.ceil(Math.random() * 5)
 console.log('ships position row', shipPositionRow)
 let shipPositionColumn = Math.ceil(Math.random() * 5)
