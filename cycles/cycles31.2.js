@@ -19,13 +19,13 @@ do {
     shotAtShipColumn = +prompt(" A shot at the ship. From 1 to 2. Column = ")
     if ((shotAtShipRow === shipPositionRow) && (shotAtShipColumn === shipPositionColumn)) {
         searchId = document.getElementById(`${shotAtShipRow}${shotAtShipColumn}`);
-        (searchId.style.background = "red");
+        searchId.style.background = "red";
         alert(' You won.The ship sank.')
         break;
     }
-    else if ((shotAtShipRow !== shipPositionRow) || (shotAtShipColumn !== shipPositionColumn)) {
+    else if ((shotAtShipRow !== shipPositionRow) || (shotAtShipColumn !== shipPositionColumn)) { // ДЛЯ ЧОГО ТУТ ПЕРЕВІРКА???????????????????????????????????????
         searchId = document.getElementById(`${shotAtShipRow}${shotAtShipColumn}`);
-        (searchId.style.background = "black");
+        (searchId.style.background = "black"); // ЦІ ДУЖКИ НАХЄР НЕ ТРЕБА
         alert(' Wrong. Try again')
     }
 
