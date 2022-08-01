@@ -4,24 +4,25 @@
 
 let currentNumber = 0
 let secondSmallestNumber = Infinity
-let firstSmallestNumber = +prompt("Enter your number")  //| 7    
+let firstSmallestNumber = +prompt("Enter your number")      //| 7                
 
 do {
-    currentNumber = +prompt("Enter your number")         //| 12      10       5
+    currentNumber = +prompt("Enter your number")            //| 1           12       40       20       96       10        4
 
 
-    if (currentNumber > firstSmallestNumber) {              //| 12>7         10>7     5>7
-        // && currentNumber < secondSmallestNumber) {      //| 12<Infinity    10<12
+    if (currentNumber > firstSmallestNumber) {              //| 1>7 -      12>1      40>1     20>1     96>1     10>1   4>1
+        // && currentNumber < secondSmallestNumber) {       //| 
 
-        secondSmallestNumber = currentNumber            //| 12              10        
+        secondSmallestNumber = currentNumber                //| (Infinity)  12        40       20      96       10       4
     }
 
-    else if (currentNumber < firstSmallestNumber) {        //|    5 < 7
-        firstSmallestNumber = currentNumber                //|  5
+    else if (currentNumber < firstSmallestNumber) {         //|  Infinity<7   12<1 -   40<1 -  20<1-    96<1 -  10<1-   4<1 - 
+        // secondSmallestNumber = firstSmallestNumber       //|     
+        firstSmallestNumber = currentNumber                 //|  1             (1)      (1)     (1)      (1)     (1)     (1)
     }
 
 }
-while ((secondSmallestNumber - 5) >= firstSmallestNumber)
+while ((secondSmallestNumber - 5) >= firstSmallestNumber)                                                    // (4-5) = -1 <  1
 alert(`The first smallest number = ${firstSmallestNumber} The second smallest number = ${secondSmallestNumber}  `)
 
 
