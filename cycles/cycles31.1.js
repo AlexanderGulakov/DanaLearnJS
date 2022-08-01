@@ -2,10 +2,6 @@
 //  З клавіатури поступово вводяться координати пострілу поки корабель не буде потоплено. 
 //  Спробуйте відоразити гру графічно.
 
- 
- 
-
-
 let rowTable = 5
 let columnTable = 5
 
@@ -15,12 +11,13 @@ for (let i = 0; i < rowTable; i++) {          //| i = 0                         
     document.write("<tr>");
     for (let j = 0; j < columnTable; j++) {  //| j = 0 / j = 1 / j = 2 / j = 3 / j = 4   | j = 0 / j = 1 / j = 2 / j = 3 / j = 4  | j = 0 / j = 1 / j = 2 / j = 3 / j = 4 | j = 0 / j = 1 / j = 2 / j = 3 / j = 4  | j = 0 / j = 1 / j = 2 / j = 3 / j = 4
         // console.log(' j ', j) // тут чому і дорівнює
-        document.write(`<td id = ${i}.${j} >   </td>`);
-        console.log(' i ', i)
-        console.log(' j ', j)
+        document.write(`<td id = ${i + 1}${j + 1} >   </td>`);
+        console.log(' i ', i + 1)
+        console.log(' j ', j + 1) 
     }
     document.write("</tr>");
 }
 document.write("</table>");
+alert(`Start Game`)
 
 
