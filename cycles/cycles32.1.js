@@ -8,11 +8,41 @@
 
 
 
-
-
-
-
-
 let field = 10
 
+
+document.write('<table border="2"> ')
+document.write("<tr>");
+for (let i = 0; i < field; i++) {
+    document.write(`<td id = ${i + 1}>   </td>`);
+    console.log(' i ', i + 1)
+}
+document.write("</tr>");
+document.write("</table>");
+alert(`Start Game`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.write('<table border="2"> ')
+// for (let i = 0; i < 1; i++) {
+//     document.write("<tr>");
+//     for (let j = 0; j < field; j++) {
+//         document.write(`<td id = ${i + 1}${j + 1} >   </td>`);
+//         console.log(' i ', i + 1)
+//         console.log(' j ', j + 1)
+//     }
+//     document.write("</tr>");
+// }
+// document.write("</table>");
+// alert(`Start Game`)
 

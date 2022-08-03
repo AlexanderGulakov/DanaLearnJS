@@ -3,17 +3,24 @@ body {
   display: flex;
   justify-content: center;
   height: 100%;
-  margin-top: 50px;
+  margin-top: 100px;
   
 }
 
 table {
   background-color: blue;
+  width: 1000px;
+  height: 100px;
+  border: 2px solid blue;
+  
+}
+/* table {
+  background-color: blue;
   width: 300px;
   height: 300px;
   border: 2px solid blue;
   
-}
+} */
 
 td {
 
@@ -21,6 +28,3 @@ td {
   border: 2px solid blue;
 }
 
-/* .searchId { 
-  background-color: red;
-} */

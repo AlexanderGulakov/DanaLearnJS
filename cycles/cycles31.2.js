@@ -4,13 +4,13 @@
 
 
 
-let shipPositionRow = 2
-let shipPositionColumn = 2
+// let shipPositionRow = 2
+// let shipPositionColumn = 2
 let searchId;
-// let shipPositionRow = Math.ceil(Math.random() * 5)
-// console.log('ships position row', shipPositionRow)
-// let shipPositionColumn = Math.ceil(Math.random() * 5)
-// console.log('ships position column', shipPositionColumn)
+let shipPositionRow = Math.ceil(Math.random() * 5)
+console.log('ships position row', shipPositionRow)
+let shipPositionColumn = Math.ceil(Math.random() * 5)
+console.log('ships position column', shipPositionColumn)
 
 let shotAtShipRow;
 let shotAtShipColumn;
