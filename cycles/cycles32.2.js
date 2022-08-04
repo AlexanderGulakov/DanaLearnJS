@@ -21,7 +21,7 @@ do {
     console.log('shot', shotPosition)
     quantityPatron--                                                        // кількість патронів     
     console.log('quantityPatron', quantityPatron)
-    if (quantityPatron === 0) {
+    if (quantityPatron === 0) { // А ЯКЩО ОСТАННІМ ПАТРОНОМ ВБИВ ЗАЙЦЯ?? 
         alert(`You lost. quantity of patron = 0`)
         break;
     }
