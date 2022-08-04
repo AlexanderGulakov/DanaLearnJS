@@ -21,14 +21,15 @@ do {
     console.log('shot', shotPosition)
     quantityPatron--                                                        // кількість патронів     
     console.log('quantityPatron', quantityPatron)
-    if (quantityPatron === 0) { // А ЯКЩО ОСТАННІМ ПАТРОНОМ ВБИВ ЗАЙЦЯ?? 
-        alert(`You lost. quantity of patron = 0`)
-        break;
-    }
     if (shotPosition === rabbitPosition) {
         alert(`You won`)
         break;
     }
+    else if (quantityPatron === 0) { // А ЯКЩО ОСТАННІМ ПАТРОНОМ ВБИВ ЗАЙЦЯ?? 
+        alert(`You lost. quantity of patron = 0`)
+        break;
+    }
+
     shiftRabbitPosition = Math.floor(Math.random() * (3 - (-3))) + (-3);    //стрибок зайця  на   +2    +3     +2    -3
     // return Math.floor(Math.random() * (max - min)) + min;
     console.log('rabbit position shift', shiftRabbitPosition)
