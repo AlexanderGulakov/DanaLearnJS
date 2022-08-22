@@ -11,7 +11,7 @@ let result;
 
 switch (operation){
 
-    case 1 : result = firstNumber + secondNumber  ;
+    case 1 : result = firstNumber + secondNumber;
     break;
     case 2: result = firstNumber - secondNumber;
     break;

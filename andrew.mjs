@@ -1,17 +1,15 @@
 //21 Задані координати точки на поверхні і центра кулі. Знайти її об’єм і площу поверхні, за допомогою підпрограм.
 
-import { calcSideLength, calcSphereSquare, calcVolumeSphere } from "./helpers/mathFormulasFunctions.mjs";
-
-const pointA_x = -2;
-const pointA_y = 3;
-
-const pointB_x = 4;
-const pointB_y = 3;
-
-const sideLength = calcSideLength(pointB_x, pointA_x, pointB_y, pointA_y);
-
-const sphereSquare = calcSphereSquare(sideLength);
-console.log(`Sphere square is: ${sphereSquare}`);
-
-const sphereVolume = calcVolumeSphere(sideLength);
-console.log(`Sphere volume is: ${sphereVolume}`);
+import { getMid } from "./helpers/mathFormulasFunctions.mjs";
+const mid1 = getMid(5, 7, 9);
+const mid2 = getMid(5, 9, 7);
+const mid3 = getMid(7, 5, 9);
+const mid4 = getMid(7, 9, 5);
+const mid5 = getMid(9, 5, 7);
+const mid6 = getMid(9, 7, 5);
+console.log(`mid: ${mid1}`);
+console.log(`mid: ${mid2}`);
+console.log(`mid: ${mid3}`);
+console.log(`mid: ${mid4}`);
+console.log(`mid: ${mid5}`);
+console.log(`mid: ${mid6}`);

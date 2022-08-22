@@ -7,15 +7,24 @@
 // (ваша гармата також знаходиться на цьому ж полі).
 
 
-
-let tankPosition = Math.floor(Math.random() * (10 - 1)) + 1;                  //| розміщення танку на полі    
-// return Math.floor(Math.random() * (max - min)) + min;
-console.log('tank position', tankPosition)
 let shotAtTank;
-let tankArmor = 100                                                           //| броня танка
+let tankArmor = 30                                                          //| броня танка
 let shotDamage = 30                                                          //| урон від пострілу
 const fieldLength = 10
 let shiftTankPosition;
+let tankShotAtGun;
+let tankPosition = Math.floor(Math.random() * (10 - 1)) + 1;                  //| розміщення танку на полі    
+// return Math.floor(Math.random() * (max - min)) + min;
+console.log('tank position', tankPosition)
+let gunPosition;
+console.log('gunPosition', gunPosition)
+do {
+    gunPosition = Math.floor(Math.random() * (10 - 1)) + 1;                   //| розміщення гармати на полі    
+    console.log('gunPosition', gunPosition)
+}
+while (gunPosition === tankPosition)
+console.log('while', gunPosition)
+
 let quantityPatron = +prompt(" Write the quantity of patron.")                //| кількість патронів                    
 console.log('quantity patron prompt ', quantityPatron)
 
@@ -24,17 +33,24 @@ do {
     console.log('shot at tank', shotAtTank)
     quantityPatron--                                                          //| кількість патронів     
     console.log('quantityPatron', quantityPatron)
-    if (quantityPatron === 0 && tankArmor > 0) {
-        alert(`You lost. quantity of patron = 0`)
-        break;
-    }
-    else if (shotAtTank === tankPosition) {
-        tankArmor = tankArmor - shotDamage                                    //|  
+    if (shotAtTank === tankPosition) {
+        tankArmor = tankArmor - shotDamage                                    
         console.log('tank Armor ', tankArmor)
         if (tankArmor <= 0) {
             alert(`You won`)
             break;
         }
+    }
+    else if (quantityPatron === 0) {
+        alert(`You lost. quantity of patron = 0`)
+        break;
+    }
+
+    tankShotAtGun = Math.floor(Math.random() * (10 - 1)) + 1;                  //| танк стріляє по гарматі  
+    console.log('tank Shot At Gun', tankShotAtGun)
+    if (tankShotAtGun === gunPosition) {
+        alert(`You lost. Your qun is destroyed.`)
+        break;
     }
     shiftTankPosition = Math.round(Math.random() * (1 - (-1))) + (-1);       //| переміщення танка на  
     // return Math.floor(Math.random() * (max - min)) + min;

@@ -25,7 +25,7 @@ do {
         alert(`You won`)
         break;
     }
-    else if (quantityPatron === 0) { // А ЯКЩО ОСТАННІМ ПАТРОНОМ ВБИВ ЗАЙЦЯ?? 
+    else if (quantityPatron === 0) {  
         alert(`You lost. quantity of patron = 0`)
         break;
     }

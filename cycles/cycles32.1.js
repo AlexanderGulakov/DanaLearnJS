@@ -9,8 +9,6 @@
 
 
 let field = 10
-
-
 document.write('<table border="2"> ')
 document.write("<tr>");
 for (let i = 0; i < field; i++) {

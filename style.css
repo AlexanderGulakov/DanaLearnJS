@@ -1,16 +1,16 @@
 body {
-  background-color: darkgrey;
-  display: flex;
+  background-color: white;
+  /* display: flex; */
   justify-content: center;
   height: 100%;
-  margin-top: 200px;
+  margin-top: 50px;
   
 }
 
 table {
   background-color: blue;
-  width: 1000px;
-  height: 100px;
+  width: 500px;
+  height: 500px;
   border: 2px solid blue;
   
 }
