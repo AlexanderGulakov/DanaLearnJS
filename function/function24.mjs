@@ -2,8 +2,16 @@
 //  за відомими першим членом та знаменником. 
 // Перевірку чи є задана геометрична прогресія спадною оформити як окрему підпрограму.
 
-import {getSquareInfinitelyDescendingGeometricProg   } from "../helpers/mathFormulasFunctions.mjs";
+import { checkIsGeometricProgDescending, getSquareInfinitelyDescendingGeometricProg, } from "../helpers/mathFormulasFunctions.mjs";
 let firstMember = 6    //b1 перший член
-let denominator = 1/6  //q знаменнк
-let findSum = getSquareInfinitelyDescendingGeometricProg(firstMember,denominator)
-console.log(` sum  =  ${findSum}`)
+let denominator = 1 / 6  // знаменнк
+// Перевірку чи є задана геометрична прогресія спадною оформити як окрему підпрограму.
+
+let isGeometricProgDescending = checkIsGeometricProgDescending(denominator)
+if (  )  {
+    let sum = getSquareInfinitelyDescendingGeometricProg(firstMember, denominator) // СПОЧАТКУ ПЕРЕВІРКА ЧИ СПАДНА!!!!!
+    console.log(` sum  =  ${sum}`)
+}
+
+ 
+

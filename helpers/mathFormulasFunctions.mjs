@@ -50,33 +50,67 @@ export const getVolumeSphere = (p, r) => 4 / 3 * (p * Math.pow(r, 3))
 
 export const getSquareSurface = (p, r) => 4 * p * Math.pow(r, 2)
 
-export const getNMemberArithmeticProg = (a1, d, n) => a1 + d * (n - 1)
+export const getNMemberArithmeticProg = (a1, dif, nMember) => a1 + dif * (nMember - 1) // ПИСАТИ НОРМАЛЬНІ НАЗВИ ПАРАМЕТРІВ
 
-export const getSumNMembersArithmeticProg = (a1, d, q) => {
-    let i = 1
+export const getSumNMembersArithmeticProg = (a1, dif, nMember) => {
+    // ЦИКЛОМ ФОР, ПОЧИНАТИ З 0 І ПИСАТИ НОРМАЛЬНІ НАЗВИ ПАРАМЕТРІВ. 2, 3, 3   2+5+8 = 15
     let sum = 0
-    let an = a1         // 0        
-    while (i < q) {     // 1 < 5     |  2<5    |3<5   |4<5
-        an = an + d     // 0 +2 = 2  | 2+2 = 4 |4+2=6 |6+2 = 8
-        i++             // 2         | 3       |4     | 5
+    let an = a1
+    for (let i = 0; i < nMember; i++) {
+        console.log(`i = ${i}`)
+        console.log(`an = ${an}`)
         sum = sum + an
+        an = an + dif
     }
     return sum
 }
-//     a2 = a1 + d =0 + 2=2
-//     a3 = a2 + d =2 + 2=4
-//     a4 = a3 + d =4 + 2=6
-//     a5 = a4 + d =6 + 2=8
-export const getNMemberGeometricProg = (b1, q, n) => b1 * Math.pow(q, n - 1)
-// bn=b1 * q(в стп n−1) 
-export const getSumNMembersGeometicProg = (b1, q, n) => (b1 * (Math.pow(q, n) - 1)) / (q - 1)
-//Sn=b1(q(встn) −1)/q−1
 
-export const getSquareInfinitelyDescendingGeometricProg = (b1, q) => b1 / (1 - q)
+export const getNMemberGeometricProg = (b1, denominator, nMember) => b1 * Math.pow(denominator, nMember - 1) // НАЗВИ ПАРАМЕТРІВ
+
+export const getSumNMembersGeometicProg = (b1, denominator, nMember) => (b1 * (Math.pow(denominator, nMember) - 1)) / (denominator - 1) // НАЗВИ ПАРАМЕТРІВ
 
 
+export const checkIsGeometricProgDescending = (denominator) => {
+    if (Math.abs(denominator) < 1) {
+        console.log(`The specified geometric progression is descending `)
+    }
+    
+}
+// export const checkIsGeometricProgDontDescending = (denominator) => {
+//     if (Math.abs(denominator) > 1) {
+//         console.log(`The specified geometric progression is don't descending `)
+//     }
+// }
 
+export const getSquareInfinitelyDescendingGeometricProg = (b1, denominator) => b1 / (1 - denominator)
 
+export const calcDiscriminant = (a, b, c) => Math.pow(b, 2) - 4 * a * c
+
+export const calcQuadraticEquation = (a, b, discriminant) => {
+    if (discriminant > 0) {
+        let firstRoot = (-b) + Math.sqrt(discriminant) / 2 * a
+        let secondRoot = (-b) - Math.sqrt(discriminant) / 2 * a
+        console.log(` firstRoot = ${firstRoot} secondRoot = ${secondRoot}`)
+    }
+    else if (discriminant === 0) {
+        let root = (-b) + Math.sqrt(discriminant) / 2 * a
+        console.log(`  Root = ${root} `)
+    }
+    else {
+        console.log(`There are no roots.`)
+    }
+}
+
+export const getSumAfterNYears = (money, monthes, percents) => {
+    let sum = money
+    for (let i = 0; i < monthes; i++) {
+        console.log(`i = ${i}`)
+        sum = sum + (sum / 100 * percents)
+        // console.log(`sum = ${sum}`)
+    }
+    return sum
+
+}
 
 
 

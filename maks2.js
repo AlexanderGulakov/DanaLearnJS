@@ -1,20 +1,24 @@
-// 23	Створити підпрограми для знаходження n-го члена та суми суми перших n членів геометричної прогресії, за відомими першим членом та знаменником
+const numsArray = [7, 7, 7, 9, 45, 45, 45, 99];
+const newNumsArray = [];
+let seriaLength = 0;
 
-export const getNmember = (progressionDenominator, firstMember, searchedMember) => 
-  firstMember * Math.pow(progressionDenominator,(searchedMember-1));
-export const getMembersSummary = (progressionDenominator, firstMember, searchedMember) =>
-  firstMember*(Math.pow(progressionDenominator,searchedMember)-1) / (progressionDenominator-1);
+for (let i = 0, j = 0; i < numsArray.length; i += seriaLength + 1, j++) {
+    seriaLength = 0;
+    for (let k = i + 1; k < numsArray.length; k++) {
+        if (numsArray[i] === numsArray[k]) {
+            seriaLength++;
+        }
+        else {
 
-// 23	Створити підпрограми для знаходження n-го члена та суми суми перших n членів геометричної прогресії, за відомими першим членом та знаменником
+            break
+        }
 
-import { getMembersSummary, getNmember } from "./mathFormulas.mjs";
-
-const progressionDenominator = 2;
-const memberOne = 2;
-const searchedMember = 5;
-
-const memberFive = getNmember(progressionDenominator, memberOne, searchedMember);
-console.log(memberFive);
-
-const membersSumm = getMembersSummary(progressionDenominator, memberOne, searchedMember);
-console.log(membersSumm);
+    }
+    if (seriaLength > 0) {
+        newNumsArray[j] = numsArray[i];
+    }
+    else {
+        newNumsArray[j] = numsArray[i];
+    }
+}
+console.log('Finalarray', newNumsArray);
