@@ -70,19 +70,19 @@ export const getNMemberGeometricProg = (b1, denominator, nMember) => b1 * Math.p
 export const getSumNMembersGeometicProg = (b1, denominator, nMember) => (b1 * (Math.pow(denominator, nMember) - 1)) / (denominator - 1) // НАЗВИ ПАРАМЕТРІВ
 
 
-export const checkIsGeometricProgDescending = (denominator) => {
-    if (Math.abs(denominator) < 1) {
-        console.log(`The specified geometric progression is descending `)
-    }
-    
-}
-// export const checkIsGeometricProgDontDescending = (denominator) => {
-//     if (Math.abs(denominator) > 1) {
+export const checkIsDescendingGeometricProg = (denominator) => Math.abs(denominator) < 1
+
+// {
+//     if (Math.abs(denominator) < 1) {
+//         console.log(`The specified geometric progression is descending `)
+//         return true
+//     }
+//     else {
 //         console.log(`The specified geometric progression is don't descending `)
 //     }
+//     return false
 // }
-
-export const getSquareInfinitelyDescendingGeometricProg = (b1, denominator) => b1 / (1 - denominator)
+export const getSquareDescendingGeometricProg = (b1, denominator) => b1 / (1 - denominator)
 
 export const calcDiscriminant = (a, b, c) => Math.pow(b, 2) - 4 * a * c
 

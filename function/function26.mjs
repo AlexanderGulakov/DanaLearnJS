@@ -15,7 +15,7 @@ let monthesQuantity = depositLengthYears * monthInOneYear  // = 24 перево�
 let percentsPerMonth = depositPercentRate / monthInOneYear // =0.5 визначаємо скільки буде нараховуватись відсотків за 1 місяць
 
 let totalSum = getSumAfterNYears(money, monthesQuantity, percentsPerMonth) // НОРМАЛЬНЕ ЧИСЛО БУДЬ ЛАСКА
-console.log(`Sum = ${totalSum.toFixed()}`)
+console.log(`Sum = ${totalSum.toFixed(2)}`)
 
  
 

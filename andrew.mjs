@@ -1,15 +1,28 @@
-//21 Задані координати точки на поверхні і центра кулі. Знайти її об’єм і площу поверхні, за допомогою підпрограм.
+//Задача 9. Дано масив розмірності N.  Визначити максимальну кількість його однакових елементів.
 
-import { getMid } from "./helpers/mathFormulasFunctions.mjs";
-const mid1 = getMid(5, 7, 9);
-const mid2 = getMid(5, 9, 7);
-const mid3 = getMid(7, 5, 9);
-const mid4 = getMid(7, 9, 5);
-const mid5 = getMid(9, 5, 7);
-const mid6 = getMid(9, 7, 5);
-console.log(`mid: ${mid1}`);
-console.log(`mid: ${mid2}`);
-console.log(`mid: ${mid3}`);
-console.log(`mid: ${mid4}`);
-console.log(`mid: ${mid5}`);
-console.log(`mid: ${mid6}`);
+const array = [5, 5, 5, 1, 2, 5, 3, 3, 3, 5, 3, 3, 99, 5, 99];
+const newArray = [];
+let step = 1;
+let sameElementsQty = 1;
+
+for (let i = 0, j = 0; i < array.length; i += step, j++) { // створимо новий масив в який запишемо кількості кожного з однакових елементів
+    step = 1;
+    sameElementsQty = 1;
+
+    for (let k = i + 1; k < array.length; k++) {
+        if (array[i] === array[k]) {
+            step++;
+            sameElementsQty++;
+        }
+    }
+    newArray[j] = sameElementsQty;
+}
+console.log(newArray);
+
+let sameElementsMaxQty;
+for (let i = 0; i < newArray.length; i++) { // і вже в цьому новому масиві ми порівняємо кількість однакових елементів
+    if (newArray[i + 1] > newArray[i]) {
+        sameElementsMaxQty = newArray[i + 1];
+    }
+}
+console.log(sameElementsMaxQty);
