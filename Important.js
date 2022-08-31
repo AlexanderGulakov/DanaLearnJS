@@ -9,5 +9,7 @@
 // Math.floor округлення вниз      
 // Math.random() *   
 
-// <a href="адреса посилання"><img src="шлях до файлу"></a> 
-// let imgFirst = (`<img src="/img/1.jpeg">`)
+// // <a href="адреса посилання"><img src="шлях до файлу"></a> 
+// // let imgFirst = (`<img src="/img/1.jpeg">`)
+
+// document.write(`<br>`)
