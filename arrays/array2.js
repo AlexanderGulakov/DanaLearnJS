@@ -5,14 +5,14 @@
 
 
 let scoresCount = parseInt(prompt("Scores count =", " ")) // кількість оцінок 
-let scores = new Array(scoresCount)  //  масив для оцінок
+let scores = [] //  масив для оцінок
 let countScore2 = 0
 let countGoodScore = 0
 let countScoreBelowAverage = 0
 // let sum = 0
 // let arithmeticMean
 
-for (let i = 0; i < scores.length; i++) {   //Введемо оцінки учня
+for (let i = 0; i < scoresCount; i++) {   //Введемо оцінки учня
     scores[i] = parseInt(prompt("Scores №" + (i + 1), "0"));
     console.log(`scores ${scores}`)
 
