@@ -2,24 +2,54 @@
 //  Вивести на екран ті, які може собі дозволити користувач (кількість грошей задається).
 
 
+// let goods = ["Яблуко", "Груша", "Апельсин", "Слива", "Малина"]
+// let price = [10, 30, 50, 70, 100]
+
+// let countmoney = parseInt(prompt(" Count of money  =", " ")) // кількість грошей   100 
+
+// for(let i = 0; i < price.length  ; i++) {      //| i<0           | i<1           | i<2            | i<3         | i<4
+
+// if(countmoney >= price[i] ){                   //| 70>=10(0)     | 70 >= 30(1)   | 70 >= 50(2)    | 70=70 (3)   | 70>= 100 ---
+//   console.log(`price[i]${price[i]}`) 
+//   document.write(`${goods[i]}`)                //| "Яблуко"(0)   | "Груша"(1)    | "Апельсин"(2)  | "Слива" (3)  |  --
+//   console.log(`goods ${goods[i]}`) 
+// }
+
+// }
+
+
+
 let goods = ["Яблуко", "Груша", "Апельсин", "Слива", "Малина"]
-let price = [10, 30, 50, 70, 100]
+let price = [10, 30, 100, 70, 50]
 
 let countmoney = parseInt(prompt(" Count of money  =", " ")) // кількість грошей   100 
 
-for(let i = 0; i <  ; i++) {
+for(let i = 0; i < price.length  ; i++) {      //| i<0           | i<1           | i<2                 | i<3         | i<4
 
-if(i === 1){
-    document.write(`${goods[0]}`)
-   
-}
-if(i === 2){
-    document.write(`${goods[1]}`)
-   
+if(countmoney >= price[i] ){                   //| 70>=10(0)     | 70 >= 30(1)   | 100 >= 50(2) ---    | 70=70 (3)   | 70>= 50
+  console.log(`price[i]${price[i]}`) 
+  document.write(`${goods[i]}`)                //| "Яблуко"(0)   | "Груша"(1)    | ---                 | "Слива" (3)  |  "Малина"
+  console.log(`goods ${goods[i]}`) 
 }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,6 +93,10 @@ if(i === 2){
     //     console.log(`goods = ${goods[4]}`)
     // }
    
+
+
+
+
 
 
 
