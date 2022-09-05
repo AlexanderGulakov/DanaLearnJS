@@ -44,21 +44,6 @@ if(countmoney >= price[i] ){                   //| 70>=10(0)     | 70 >= 30(1)  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let countmoney = parseInt(prompt(" Count of money  =", " ")) // кількість грошей    100 
 // let apple = 10
 // let pear = 30
