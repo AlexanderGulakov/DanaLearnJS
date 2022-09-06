@@ -3,7 +3,7 @@
 
 
 let ageWorkers = [30, 45, 65, 20, 61]
-let pensioner = 60
+let pensioner = 60 // ррррррррр
 let countPensioners = 0
 
 for (let i = 0; i < ageWorkers.length; i++) { //i = 0    i = 1    i = 2     i = 3   i = 4
