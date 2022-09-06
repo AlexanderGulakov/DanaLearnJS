@@ -3,7 +3,7 @@
 
 
 let goods = ["Яблуко", "Груша", "Апельсин", "Слива"]
-let price = [10, 30, 100, 1500]
+let price = [10.50, 30.25, 100, 1500]
 let maxPrice = 1000
 
 for (let i = 0; i < price.length; i++) {  //i= 0       i= 1     i= 2        i= 3

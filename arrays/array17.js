@@ -4,9 +4,9 @@
 
 
 let goods = ["Яблуко", "Груша", "Апельсин", "Слива"]
-let price = [50, 20, 100, 150]
+let price = [50.50, 20.30, 100.25, 150]
 let countQoods = 0
-let countMoney = parseInt(prompt(" Count of money  =", " ")) // кількість грошей  100 // де копійки? )
+let countMoney = parseInt(prompt(" Count of money  =", " ")) // кількість грошей  100.50 // де копійки? )
 
 for (let i = 0; i < price.length; i++) {  // i= 0                              
     console.log(`i=${i}`)
