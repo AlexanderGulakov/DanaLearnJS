@@ -5,7 +5,7 @@
 let number = [2, 1, 6, 4, 6, 6, 2, 2, 6, 1, 6]
 
 let maxCount = 0
-for (let i = 0; i < number.length-1; i++) {  //i = 0                                                                                   |i = 1                                                                      |i = 2                                                                
+for (let i = 0; i < number.length - 1; i++) {  //i = 0                                                                                   |i = 1                                                                      |i = 2                                                                
     console.log(`i = ${i}`)
     let count = 1
     for (let j = i + 1; j < number.length; j++) {  //j = 0  j = 2   j = 3   j = 4    j = 5   j = 6    j = 7    j = 8    j = 9     j = 10 |j=0       j=3     j=4    j=5    j=6     j = 7     j = 8   j = 9   j = 10   |j=0
@@ -21,7 +21,7 @@ for (let i = 0; i < number.length-1; i++) {  //i = 0                            
         maxCount = count  //  3       2       5
     }
 }
-alert(`Maximum number of identical elements = ${maxCount}`) //5
+console.log(`Maximum number of identical elements = ${maxCount}`) //5
 
 
 // let number = [2, 1, 6, 4, 6, 6, 2, 2, 6, 1, 6]

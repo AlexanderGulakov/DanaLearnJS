@@ -4,7 +4,7 @@
 let number = [2, 1, 6, 4, 3, 2, 8, 10, 5, 9]
 let count = 0
 
-for (let i = 0; i < number.length-1; i++) {     //i = 0 i<10   i ++
+for (let i = 0; i < number.length-2; i++) {     //i = 0 i<10   i ++
     console.log(`i= ${i}`)
     if ((number[i + 1] < number[i]) && (number[i + 1] < number[i + 2])) {    //number[1] < number[0] && number[1] < number[2]
         count++                                                             // 1
