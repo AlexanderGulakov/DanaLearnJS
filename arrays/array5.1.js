@@ -11,24 +11,26 @@ let result = []
 // let seriesLength = 1  // довжина серії- кількість елементів в серії
     // let series = 0                                        //|  
 
-for (let i = 0; i < number.length; i++) {              //| i = 0    |  i = 2
-    let series = 1                                     //|  
- 
-    if ((number[i] !== number[i + 1])) {               //|              2!=3                      
-        series = 0                                     //|               0
-        result[i] = series
-        console.log(`result[i]= ${result[i]}`)
-    }
-    // series = 1
-    for (let j = 0; number[i] === number[i + 1]; j++) { //| j = 0                        
-        if ((number[i] === number[i + 1])) {            //|  5===5                          
-            series = series + 1                         //|  2                                
-            i++                                         //| i = 1      
+for (let i = 0; i < number.length; i++) {                   //| i = 0     | i = 2     | i = 3    i = 
+    if((number[i] !== number[i + 1])){                                  //|2!==3
+        series = 0
+        result[i] = series                                               //|0
+        console.log(`result[i]= ${result[i]}`)                           //| 0
+    }                                   
+    for (let j = 0; j < i < number.length; j++) { //| j = 0                | j = 0 
+        let series = 1                   
+        if ((number[i] === number[i + 1])) {                  //| 5===5               //| 3===3  3===3                                               
+            series ++                                         //| 2                   //| 2      4                         
+            result[j] = series                                //| 2                   //| 2                
+        if(number[i+1] === number[i + 2]) {                   //|                     //| 3===3
+            series ++                                         //|                     //| 3                                          
+            result[j] = series                                //|                     //| 3
+            i++
         }
-       
     }
-    result[i] = series                                  //  2             0        
-    console.log(`result[i]= ${result[i]}`)
+     console.log(`result[j]= ${result[j]}`)                   //|2                    //|3
+    }
+                                      
 }
 
 
@@ -45,63 +47,61 @@ for (let i = 0; i < number.length; i++) {              //| i = 0    |  i = 2
 
 
 
+// let number = [5, 5, 2, 3, 3, 3, 3, 4, 5, 6, 6, 2, 2, 1]  //масив розмірності N. 
+// // let final = [2,0,4,0,0,2,2,0]
 
+// // let series      //група однакових елементів що йдуть поспіль
+// let result = []
+// // let seriesLength = 1  // довжина серії- кількість елементів в серії
+//     // let series = 0                                        //|  
 
-
-
-
-
-
-// for (let i = 0; i < number.length; i++) {      //| i = 0     i = 1     i = 2
-//     let series = 1
-//     for (let j = 0; j < number.length; j++) {  //| j = 0     j = 1
-//         if ((number[i] === number[i + 1])) {     //|5===5    5!==2
-//             series++                           //| 2
-//         }
-//     }
-
-//     if ((number[i] !== number[i + 1])) {                  //| 5!==2
-//         series = 0                                        //| 0
+// for (let i = 0; i < number.length; i++) {              //| i = 0    |  i = 2
+//     let series = 1                                     //|  
+ 
+//     if ((number[i] !== number[i + 1])) {               //|              2!=3                      
+//         series = 0                                     //|               0
 //         result[i] = series
 //         console.log(`result[i]= ${result[i]}`)
 //     }
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for (let i = 0; i < number.length; i++) {      //| i = 0 |  i = 1 | i = 2 | i = 3
-//     let series = 1
-//     for (let j = i+1; j < number.length; j++) {//| j = 1 |                |j = 0
-//         if (number[i] === number[j]) {         //| 5===5 |                |3===3
-//             series++                           //|  +    |                |+
-//             result[i] = series                 //|  2    |                |3
-//             console.log(`result[i]= ${result[j]}`)
-
-//             // alert(`${ }`)
+//     // series = 1
+//     for (let j = 0; number[i] === number[i + 1]; j++) { //| j = 0                        
+//         if ((number[i] === number[i + 1])) {            //|  5===5                          
+//             series = series + 1                         //|  2                                
+//             i++                                         //| i = 1      
 //         }
+       
 //     }
-//         if (number[i] !== number[i + 1]) {              //| 5!==2 | 2!==3
-//             series = 0
-//             result[i] = series                          //| 0     | 0
-//             console.log(`result[i]= ${result[i]}`)
-//         }
-
+//     result[i] = series                                  //  2             0        
+//     console.log(`result[i]= ${result[i]}`)
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
