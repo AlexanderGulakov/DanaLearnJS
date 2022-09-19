@@ -1,30 +1,35 @@
-// 10.	Дано масив розмірності N і число k ( k <N). 
+// 10.	Дано масив розмірності N і число k (k <N). 
 // Здійснити циклічний зсув елементів масиву вправо на k позицій. 
 // Наприклад для масиву [1,2,3,4,5,6] 
 // та k=2 після виконання зсуву отримуємо [5,6,1,2,3,4].
 
+
 let array = [5, 7, 4, 2, 1, 9, 3, 4]  //length = 8
+const newArray = []
 console.log(`array ${array}`)
-const k = parseInt(prompt(" Shift the elements of the array to the right by k positions.K<8. K =", " "))//2
-// let result = array.length - k  //6
-// console.log(`result ${result}`)
-let newArray = []
-for (let i = 0; i < array.length - k; i++) {    // i = 0           i = 1         i = 2       i<6
-    // console.log(`i ${i}`)
+const k = parseInt(prompt(" Shift the elements of the array to the right by k positions.K <" + (array.length), ""))   //1
 
-    for (let j = i + 6; j < array.length; j++) { //j = 6  j = 7       j < 8
-        // console.log(`i ${i}`)
-        // console.log(`j ${j}`)
-        if (i === 0) {
-            newArray = array[j]                   //  3         4
-            console.log(`newArray  ${newArray}`)   // 3         4
+for (let i = 0, j = i + k; i < array.length; i++, j++) {  // i<8   i=0  j = 1
+
+    if (i === array.length - k) { // i=== 7   
+        j = 0                  // j= 0           
+        newArray[j] = array[i] //  newArray[0] = array[7]
+        console.log(`j if ${j}`)
+        if (k === 1) {
+            break;                // break
         }
-    }
-    newArray = array[i]                        //  5   7  4  2  1 9 
-    console.log(`newArray  ${newArray}`)
+        j++                    // j= 
+        i++                    // i= 
 
+    }
+    newArray[j] = array[i]   //  newArray[1] = array[0]    [2]=[1]  [3]=[2]  [4]=[3]  [5]=[4]  [6]=[5]   [7]=[6] 
+
+    console.log(`i ${i}`)
+    console.log(`j ${j}`)
+    console.log(`newArray[j] ${newArray[j]}`)
 }
 
+console.log(`newArray[j] ${newArray}`)
 
 
 
@@ -36,31 +41,34 @@ for (let i = 0; i < array.length - k; i++) {    // i = 0           i = 1        
 
 
 
-// for (let i = 0; i < array.length; i++) { // i = 0      i = 1    i = 2                   i<8
-//     array[i] = array[i + result]           //5 = 3      7= 4
-//     newArray[i] = array[i]              // 3           // 4
-//     console.log(`newArray[i] ${newArray[i]}`)
-//     // alert(`newArray[i] = ${newArray[i]}`)
-//     if (i >= k) { // i >= 2
-//         newArray[i] =
-//         console.log(`newArray[i] ${newArray[i]}`)
+
+
+// for (let i = 0, j = i + k; i < array.length; i++, j++) {  // i<8   i=0  j = 3
+
+//     if (i === array.length - k) { // i=== 5
+//         j = 0                  // j= 0
+//         newArray[j] = array[i] //  newArray[0] = array[5]
+//         console.log(`j if ${j}`)
+//         j++                    // j= 1
+//         i++                    // i= 6
+
 //     }
+//     newArray[j] = array[i]   //  newArray[3] = array[0]    [4]=[1]  [5]=[2]  [6]=[3]  [7]=[4]  |   [1]=[6]   [2]=[7]
+
+//     console.log(`i ${i}`)
+//     console.log(`j ${j}`)
+//     console.log(`newArray[j] ${newArray[j]}`)
 // }
 
+// console.log(`newArray[j] ${newArray}`)
 
 
-// let number = [1, 2, 3, 4, 5, 6, 7, 8]  //length = 8
-// const k = parseInt(prompt(" Shift the elements of the array to the right by k positions.K < 8. K =", " "))//1
-// let result = []
-// for (let i = 0; i < number.length; i++) {
-//     result[i] = number[i]
-//     console.log(`result[i] ${result[i]}`)
-//     if (i === 7) {
 
-//         result[i] = number[i] % number.length + k
-//         console.log(`result[i] ${result[i]}`)
-//     }
-// alert(`result[i] = ${result[i]}`)
-// }
+
+
+
+
+
+
 
 
