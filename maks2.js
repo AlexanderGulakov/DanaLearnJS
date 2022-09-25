@@ -1,98 +1,17 @@
-const numsArray = [7, 7, 7, 9, 45, 45, 45, 99];
-const newNumsArray = [];
-let seriaLength = 0;
+// 12.	Дано числовий масив розмірності N. 
+// Знайти кількість його локальних максимумів.
+// Локальним максимумумом називається елемент, значення якого більше  від сусідів
 
-for (let i = 0, j = 0; i < numsArray.length; i += seriaLength + 1, j++) {
-    seriaLength = 0;
-    for (let k = i + 1; k < numsArray.length; k++) {
-        if (numsArray[i] === numsArray[k]) {
-            seriaLength++;
-        }
-        else {
 
-            break
-        }
+// let number = [1, 5, 2, 3, 1, 1, 1, 7, 5]
+let number = [1, 5, 2, 3, 1, 1, 1, 7, 5, 6, 2]
+let count = 0
 
-    }
-    if (seriaLength > 0) {
-        newNumsArray[j] = numsArray[i];
-    }
-    else {
-        newNumsArray[j] = numsArray[i];
+for (let i = 0; i < number.length - 2; i++) {     //i = 0  i< 9   i ++  |i = 0  | i = 1   |i = 2  | i = 3 | i = 4  | i = 5 | i = 6
+    console.log(`i= ${i}`)
+    if ((number[i + 1] > number[i]) && (number[i + 1] > number[i + 2])) {  //number[1]> number[0] && number[1] > number[2] |   [2] > [1] && [2] > [3] |   [3] > [2] && [3] > [4] |   [4] > [3] && [4] > [5] |   [5] > [4] && [5] > [6] |  [6] > [5] && [6] > [7] |  [7] > [6] && [7] > [8] 
+        count++                                                           // 1 + 0  + 1 + 0 + 0 + 0 + 1 = 3
+        console.log(`count= ${count}`)
     }
 }
-console.log('Finalarray', newNumsArray);
-
-
-update - browsers - versions.mjs
-
-const tmp_file_dir_path = "./tmp";
-const chrome_driver_file_path = `${tmp_file_dir_path}/chrome_driver_versions.xml`;
-const chrome_driver_url = "https://chromedriver.storage.googleapis.com/";
-
-
-await downloadFile(tmp_file_dir_path, chrome_driver_file_path, chrome_driver_url);
-
-const chrome_driver_versions = await grabDataFromXml(chrome_driver_file_path).then(
-    (data) => data.ListBucketResult.Contents
-);
-const last_chrome_driver_versions = await getLastChromeDriverVersions(chrome_driver_versions);
-
-
-//   helpers
-
-const downloadFile = async (dirPath, filePath, url) =>
-    new Promise((resolve, reject) => {
-        if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath, { recursive: true }); // Create temp directory if not exists
-        }
-
-        const file = fs.createWriteStream(filePath, { flags: "w" });
-
-        const request = https.get(url, (response) => {
-            if (response.statusCode === 200) {
-                response.pipe(file);
-            } else {
-                file.close();
-                fs.unlink(filePath, () => { }); // Delete temp file
-                reject(`Server responded with ${response.statusCode}: ${response.statusMessage}`);
-            }
-        });
-
-        request.on("error", (err) => {
-            file.close();
-            fs.unlink(filePath, () => { }); // Delete temp file
-            reject(err.message);
-        });
-
-        file.on("finish", () => {
-            console.log("Finish downloading chrome driver versions");
-            resolve();
-        });
-
-        file.on("error", (err) => {
-            file.close();
-
-            if (err.code === "EEXIST") {
-                reject("File already exists");
-            } else {
-                fs.unlink(filePath, () => { }); // Delete temp file
-                reject(err.message);
-            }
-        });
-    });
-
-const grabDataFromXml = (filePath) =>
-    new Promise((resolve, reject) => {
-        fs.readFile(filePath, (err, data) => {
-            if (err) {
-                return reject(err);
-            }
-            resolve(data);
-        });
-    })
-        .then((data) => parser.parse(data))
-        .catch((err) => {
-            console.error(err);
-            return err;
-        });
+alert(`count = ${count}`)
