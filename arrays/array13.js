@@ -18,29 +18,54 @@
 let array = [2, 2, 9, 105, 1, 1, 1, 2, 3, 3, 4, 4, 17, 98, 98, 99, 105, 105]  //масив розмірності N. 
 // let final = [2,2,'seria 1',9,105,1,1,1,'seria 2',2,3,3,'seria 3',4,4,'seria 4', 17, 98,98, 'seria 5', 99,105,  105, 'seria 6']
 let newArray = []
+for (let i = 0, k = 0, l = 1; i < array.length; i++, k++) {
+    /////////////////////////////////|i=0 j=1 k = 0 l = 1  |
+    newArray[k] = array[i]         //|
 
-
-for (let i = 0, j = i + 1, k = 0, l = 1; i < array.length; i++, j++, k++) {//i<14
-    ////////////////////                       //| i=0 j=1 k=0  l=1            |i= 2 j=3 k=3      |i= 3 j=4 k=4    |i= 4 j=5 k=5    
-    let series = array[i]                      //|series = 2                   |series = 9        |series = 105    |series = 1  
-    newArray[k] = series                       //| newArray=2                  | newArray=9       | newArray=105   | newArray=1                              
-    let number = `Серія № ${l}`                //| l=1                         | l=2              | l=2            | l=2                 
-    if ((array[i] === array[j])) {             //|a[0]===a[1](2=2)             |                  |                |[4]=[5](1=1)                                                                                 
-        for (; array[i] === array[j]; i++, j++,k++) {//i=0 j=1k=0 |i=1 j=2 k=2 |                  |                |i= 4 j=5 k=5  i= 5 j=6 k=7                                 
-            k++                                //|k=1                          |                  |                |k=6
-            newArray[k] = series               //|newArray=2                   |                  |                |1       
-            console.log(`newArray[k]= ${newArray[k]}`)            
-        }
-        newArray[k] = number                   //|newArray=[seria 1]           |                  |
-        l++                                    //| l=2
+    if ((array[i] === array[i - 1]) && (array[i] !== array[i + 1])) {
+        k++                        //|                                                      
+        newArray[k] = `Серія № ${l}`                             
+        l++                        //| 
 
     }
-    else {
-        newArray[k] = series                   //|                           |newArray=[9]       |newArray=[105]   
-    }
-
     console.log(`newArray[k]= ${newArray[k]}`)
 }
-console.log(`newArray = ${newArray}`)          //| 2 , 2 ,"seria 1"          |     9             |   105        
+console.log(`newArray = ${newArray}`)  
+
+
+
+
+
+
+
+// for (let i = 0, j = i + 1, k = 0, l = 1; i < array.length; i++, j++, k++) {
+//     /////////////////////////////////|i=0 j=1 k = 0 l = 1  |i=2 j=3 k = 3 l = 2 |i=3 j=4 k = 4 l = 2  |i=4 j=5 k = 5 l = 2 |i=5 j=6 k = 6 l = 2   |i=7 j=8 k = 9 l = 3  |i=8 j=9 k = 10 l = 3
+//     newArray[k] = array[i]         //|k = 0  / 2           | k = 3  / 9         | k = 4  / 105        | k = 5  / 1         | k = 6  / 1           |k = 9  / 2           |k = 10  / 3
+//     let number = `Серія № ${l}`
+
+//     if ((array[i] === array[j]) && (array[j] !== array[j + 1])) {
+//         k++                        //| k = 1               |                    |                     |                    | k = 7
+//         newArray[k] = array[i]     //| k = 1 / 2           |                    |                     |                    | k = 7 / 1
+//         k++                        //| k = 2               |                    |                     |                    |k = 8
+//         newArray[k] = number       //| k = 2 / Cерія 1     |                    |                     |                    |k = 8 /Cерія 2
+//         l++                        //| l = 2               |                    |                     |                    |l = 3
+//         i++                        //| i = 1               |                    |                     |                    |i=6
+//         j++                        //| j = 2               |                    |                     |                    |j=7
+//     }
+
+//     console.log(`newArray[k]= ${newArray[k]}`)
+// }
+// console.log(`newArray = ${newArray}`)  // 
+
+
+
+
+
+
+
+
+
+
+
 
 

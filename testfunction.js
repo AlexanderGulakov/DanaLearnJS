@@ -1,6 +1,9 @@
-// Задача 11. Скласти скрипт для сортування масиву arr в порядку, коли спочатку йдуть всі парні чила, потім – непарні.
+// Задача 9. Дано рядок тексту. Перевірити, чи містить він дату у форматі dd.mm.yyyy (dd- день, mm- місяць, yyyy- рік)
 
-const numsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const birthDate = '01.01.2022 wtf';
+const birthDateRegExp = /^(0[1-9]|[12][0-9]|3[01])[.](0[0-9]|1[12])[.]\d{4}$/
 
-const sortArrayByEven = (a, b) => a % 2 - b % 2;
-console.log(numsArr.sort(sortArrayByEven));
+const getDate = (string, regexp) => regexp.test(string);
+
+const dateExtracted = getDate(birthDate, birthDateRegExp);
+console.log(dateExtracted);
