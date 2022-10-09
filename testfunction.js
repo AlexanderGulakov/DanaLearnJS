@@ -1,9 +1,29 @@
-// Задача 9. Дано рядок тексту. Перевірити, чи містить він дату у форматі dd.mm.yyyy (dd- день, mm- місяць, yyyy- рік)
+/* Задача 11. Дано числовий масив розмірності N.  Вважати, що його елементи утворюють числову послідовність, 
+утворити новий масив що містить найдовшу зростаючу підпослідовність.*/
 
-const birthDate = '01.01.2022 wtf';
-const birthDateRegExp = /^(0[1-9]|[12][0-9]|3[01])[.](0[0-9]|1[12])[.]\d{4}$/
+const array =  [0,8,4,12,2,10,6,14,1,9,5,13,3,11,7,15]
+let finalArray = [];
+let currentArray = [];
+let biggestNum = 0;
 
-const getDate = (string, regexp) => regexp.test(string);
+for (let i = 0, zeroIndex = 0; i < array.length; i++) {
 
-const dateExtracted = getDate(birthDate, birthDateRegExp);
-console.log(dateExtracted);
+    currentArray = [];
+    biggestNum = currentArray[zeroIndex] = array[i];
+
+    for (let j = i + 1, k = 0; j < array.length; j++) {
+
+        if (array[j] > biggestNum) {
+            biggestNum = array[j];
+            k++
+            currentArray[k] = biggestNum;
+        }
+    }
+
+    if (currentArray.length > finalArray.length) {
+        finalArray = currentArray;
+    }
+    console.log(`${i}---${currentArray}`)
+
+}
+console.log(finalArray);
