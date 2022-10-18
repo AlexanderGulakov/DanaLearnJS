@@ -27,7 +27,7 @@ const newArr = arrayPrices.map((currentValue) => {
     if (currentValue < fixedPrice) {
         return (currentValue * 1.2).toFixed(2)
     }
-    if (currentValue > fixedPrice) {
+    else if (currentValue > fixedPrice) {
         return (currentValue * 0.7).toFixed(2)
     }
     return currentValue.toFixed(2)

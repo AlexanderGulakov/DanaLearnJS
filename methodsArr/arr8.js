@@ -20,7 +20,7 @@
 
 const arrayLetters = ['!', 'f', 'a', '6', '#', '@', 'a', 'n', 'a']
 const fixedLetter = 'a'
-const newArr = arrayLetters.reduce((amount, currentValue) => {
+const newArr = arrayLetters.reduce((amount, currentValue) => { // переробити
     if (currentValue === fixedLetter) {
         amount++
     }
