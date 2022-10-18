@@ -15,12 +15,10 @@
 // console.log(`Quantity = ${newArr}`)
 
 
-
 // 2 варіант :
-
 const arrayLetters = ['!', 'f', 'a', '6', '#', '@', 'a', 'n', 'a']
 const fixedLetter = 'a'
-const newArr = arrayLetters.reduce((amount, currentValue) => { // переробити
+const newArr = arrayLetters.reduce((amount, currentValue) => { 
     if (currentValue === fixedLetter) {
         amount++
     }
