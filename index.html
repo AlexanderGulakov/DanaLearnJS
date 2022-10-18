@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>russian warship! Go Fuck Yorself</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="testfunction.js"></script>
+    <title>Currency converter</title>
 </head>
 
 <body>
+    <h1>Currency converter</h1>
+    <div>
+        <p>
+        <form action="/form/submit" method="post">
+            <label for="money">Enter your money amount</label>
+            <input type="text" name="moneyAmount" class="input" id="money">
+        </form>
+        </p>
 
-   <script src="arrays/array.js">   </script>
-
-  <!-- <script src="cycles/cycles33.2.js">   </script>  -->
-
+        <p>
+        <form action="/form/submit" method="post">
+            <label for="exchange">Enter USD exchange rate</label>
+            <input type="text" name="exchangeRate" class="input" id="exchange">
+        </form>
+        <p>
+            <input type="button" value="Convert" id="converter" onclick="convertCurrency()">
+        </p>
+    </div>
+    <div>
+        <p>
+        <form action="/form/submit" method="post">
+            <label for="res" id="lastlabel">Result:</label>
+            <input type="text" name="result" class="input" id="res">
+        </form>
+        </p>
+    </div>
 </body>
 
 </html>

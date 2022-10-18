@@ -54,54 +54,6 @@ console.log(longestAscendingOfSequence)
 
 
 
-
-
-
-// // let array = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15] // числовий масив розмірності N. 
-// let externalArray = [] // зовнішній масив
-// let internalArrays = [] // внутрішні масиви
-// let tempArray = []
-
-
-// for (let i = 0; i < array.length; i++) { // i = 0   i<16       
-
-// let i = 0
-// for (let j = i + 1; j < array.length; j++) {// j = 1 (8)
-//     internalArrays[0] = array[i]
-//   for (let l = 0, m = 0; l < internalArrays.length; l++, m++) {
-//                 tempArray[l] = internalArrays[m] //  
-//                 console.log(`tempArray[l]  = ${tempArray[l]}`)
-//             }
-//             tempArray[tempArray.length] = j  //[0,8]
-//             console.log(`tempArray[l]  = ${tempArray[k]}`)
-//             if()
-
-//         }
-
-//     for (let k = internalArrays.length; k >= 0; k--) { //
-
-//         // if (j > internalArrays[internalArrays.length - 1]) {//  8 > 0   
-
-          
-        
-//     }
-// }
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 

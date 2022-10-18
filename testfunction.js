@@ -1,29 +1,13 @@
-/* Задача 11. Дано числовий масив розмірності N.  Вважати, що його елементи утворюють числову послідовність, 
-утворити новий масив що містить найдовшу зростаючу підпослідовність.*/
+// Задача 3. Конвертер валют.
 
-const array =  [0,8,4,12,2,10,6,14,1,9,5,13,3,11,7,15]
-let finalArray = [];
-let currentArray = [];
-let biggestNum = 0;
+const convertCurrency = () => {
+    const inputNums = document.getElementsByTagName('input');
+    console.log(inputNums)
 
-for (let i = 0, zeroIndex = 0; i < array.length; i++) {
-
-    currentArray = [];
-    biggestNum = currentArray[zeroIndex] = array[i];
-
-    for (let j = i + 1, k = 0; j < array.length; j++) {
-
-        if (array[j] > biggestNum) {
-            biggestNum = array[j];
-            k++
-            currentArray[k] = biggestNum;
-        }
-    }
-
-    if (currentArray.length > finalArray.length) {
-        finalArray = currentArray;
-    }
-    console.log(`${i}---${currentArray}`)
-
+    const moneyAmount = parseFloat(inputNums[0].value);
+    console.log(moneyAmount)
+    const currencyExchangeRate = parseFloat(inputNums[1].value);
+    console.log(currencyExchangeRate)
+    const convertedCurrency = (moneyAmount / currencyExchangeRate).toFixed(2);
+    inputNums[3].value = convertedCurrency;                         // Прошу звернути увагу, підозрюю, що вирішення недосконале. Бо я пропустив один інпут (який є кнопкою) і одразу хардкоджу третій елемент колекції
 }
-console.log(finalArray);
