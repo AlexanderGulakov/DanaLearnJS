@@ -3,15 +3,27 @@
 
 // 1 варіант :
 // const arrayOfNumbers = [5, 5, 2, 3, 4, 5, 6, 2, 1]
-// let maxNumber = arrayOfNumbers[0]
-// const getMaxNumber = (array, maxNumber) => 
-//     array.forEach((currentValue) =>
+// const getMaxNumber = (currentValue, index) => {
+//     maxNumber = currentValue[index]
+//     if (currentValue > maxNumber) {
+//         maxNumber = currentValue
+//          return maxNumber
+//     }
    
+// }
+// const definedMaxNumber = arrayOfNumbers.forEach(getMaxNumber)
+
+// console.log(`maxNumber = ${definedMaxNumber}`)
 
 
 
-//  getMaxNumber(arrayOfNumbers, maxNumber)
-// console.log(`maxNumber = ${max}`)
+
+
+
+
+
+
+
 
 
 
