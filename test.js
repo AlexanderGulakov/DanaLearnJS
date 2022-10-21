@@ -1,34 +1,45 @@
 /* 5.1Дано масив розмірності N. Назвемо серією групу однакових елементів що йдуть поспіль, а довжиною серії - кількість цих елементів (довжина серії може дорівнювати 0.  Перетворити масив так, щоб замість кожної серії йшов один елемент, що утворює серію, а її довжину. 
  */
 
-  const currentArray = [1, 6, 3, 3, 3, 5, 5, 7]
+const currentArray = [1, 6, 3, 3, 3, 5, 5, 7]
 /*Задача 5.1. Дано масив розмірності N. Назвемо серією групу однакових елементів що йдуть поспіль, 
     а довжиною серії - кількість цих елементів (довжина серії може дорівнювати 0.  
     Перетворити масив так, щоб замість кожної серії йшов один елемент, що утворює серію, та її довжину.*/
 
 
-    const numsArray = [1, 6, 3, 3, 3, 5, 5, 7]
-    const newNumsArray = [];
-    let step = 1;
-    
-    for (let i = 0, j = 0; i < numsArray.length; i += step, j++) { //
-        step = 1;
-    
-        for (k = i + 1; k < numsArray.length; k++) {
-            if (numsArray[i] === numsArray[k]) {
-                step++;
-            }
-            else {
-    
-                break
-    
-            }
-        }
-        if(step === 1) {
-            newNumsArray[j] = 0;
+const numsArray = [1, 6, 3, 3, 3, 5, 5, 7]
+const newNumsArray = [];
+let step = 1;
+
+for (let i = 0, j = 0; i < numsArray.length; i += step, j++) { //
+    step = 1;
+
+    for (k = i + 1; k < numsArray.length; k++) {
+        if (numsArray[i] === numsArray[k]) {
+            step++;
         }
         else {
-            newNumsArray[j] = numsArray[i];
+
+            break
+
         }
     }
-    console.log('Finalarray', newNumsArray);
+    if (step === 1) {
+        newNumsArray[j] = 0;
+    }
+    else {
+        newNumsArray[j] = numsArray[i];
+    }
+}
+console.log('Finalarray', newNumsArray);
+
+
+
+
+
+
+
+
+
+
+

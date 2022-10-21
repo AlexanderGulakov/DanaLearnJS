@@ -2,7 +2,6 @@
 // яка би для довільної кількості чисел знаходила добуток чисел.
 
 
-
 // 1 варіант :
 // const arrOfNumbers = [5, 5, 2, 3, 4, 5, 6, 2, 1]
 // const getAmount = (amount, currentValue) => amount += currentValue
