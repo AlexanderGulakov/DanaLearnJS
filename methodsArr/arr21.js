@@ -1,7 +1,7 @@
 
 // //21.	Задача. Дано масив цін товарів. Знайти сумарну вартість тих, які знаходяться в межах від 1000 до 2000.
 
-const arrayPrices = [1500, 220, 1028, 4490, 1000, 2400, 150]
+const arrayPrices = [50, 1500, 220, 1028, 4490, 1000, 2400, 150]
 const priceMore = 1000
 const priceLess = 2000
 const getAmountOfNumbers = (array,more,less) =>
@@ -10,7 +10,7 @@ const getAmountOfNumbers = (array,more,less) =>
       amount += currentValue
        }
     return amount
-}
+}, 0
 )
 const amountOfNumbers = getAmountOfNumbers(arrayPrices,priceMore,priceLess)
 
