@@ -5,19 +5,12 @@ const arrayOfLetter = ['a', 'b', 'c', 'd', 'e', 'y', 'f', 'o', 'l']
 console.log(`A array of letter = ${arrayOfLetter}`)
 const arrayOfVowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
-const getVowels = (firstArr, secondArr) => firstArr.filter((currentValue) => secondArr.indexOf(currentValue) !== -1);
-const sortedByVowelsArr = getVowels(leterrsArr, vowelArr);
-console.log(sortedByVowelsArr);
+// const getVowels = (firstArr, secondArr) => firstArr.filter((currentValue) => secondArr.indexOf(currentValue) !== -1);
+// const sortedByVowelsArr = getVowels(leterrsArr, vowelArr);
+// console.log(sortedByVowelsArr);
 
 
-const getVowelsLetter = (array, arrayOfVowels) =>
-
-    array.filter((currentValue, index) => {
-        if (currentValue === arrayOfVowels[arrayOfVowels.indexOf(currentValue[0])]) {
-            return currentValue
-        }
-    }
-    )
+const getVowelsLetter = (arrayOfLetter, arrayOfVowels) => arrayOfLetter.filter((currentValue) =>  arrayOfVowels.indexOf(currentValue) !== -1) 
 const vowelsLetter = getVowelsLetter(arrayOfLetter, arrayOfVowels)
 console.log(`A string consisting only of vowels = ${vowelsLetter}`)
 
@@ -26,7 +19,7 @@ console.log(`A string consisting only of vowels = ${vowelsLetter}`)
 
 
 
-// const arrayOfLetter = ['a', 'b', 'c', 'd', 'e', 'y', 'f', 'o', 'l']
+// const arrayOfLetter = ['a', 'b', 'c', 'd', 'e', 'y', 'f', 'o', 'l']  ---- невірно
 // console.log(`A array of letter = ${arrayOfLetter}`)
 // const arrayOfVowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
