@@ -2,14 +2,15 @@
 
 const arrOfString = ["Oleksander3", "Daniella29", "Oleksander33", "1Daniella"]
 console.log(`A array of string = ${arrOfString}`)
-const regular = /1{1}/gi
-// var patt1 = /\d{4}/g;
-// const regular = /[13]/i
+//const regular =/[1 3]/g  
+//const regular = /[1]/i
+ 
 const getStringsWithNumber = (regular, array) => array.filter((currentValue) => regular.test(currentValue)) 
     
 const newString = getStringsWithNumber(regular, arrOfString)
 console.log(`newString =  ${newString}`)
 
+ 
 
 
 
