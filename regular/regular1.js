@@ -2,17 +2,29 @@
 
 const arrOfString = ["Oleksander", "Daniella29", "Oleksander33", "Daniella"]
 const regular = /\d/g
-const getResult = (re, array) => { // ЩО ЦЕ ЗА НАЗВИ ПАРАМЕТРІВ І ЗМІННИХ? РОЗСЛАБИЛИСЬ БАЧУ!
-  return array.filter((currentValue) => { 
-    if (re.test(currentValue)) { // ЦЕ МОЖНА СПРОСТИТИ, ЯКЩО УВАЖНО ПОЧИТАТИ ЯК ПРАЦЮЄ ФІЛЬТЕР(АБО ЗГАДАТИ ЯК ЦЕ РОБИЛИ В ПОПЕРЕДНІЙ ТЕМІ)
-      return currentValue
-    }
-    // console.log(`currentValue =  ${currentValue}`)
-  }
-  )
-}
-const newString = getResult(regular, arrOfString)
+const getStringsWithNumber = (regular, array) => array.filter((currentValue) => regular.test(currentValue))
+// console.log(`currentValue =  ${currentValue}`)
+const newString = getStringsWithNumber(regular, arrOfString)
 console.log(`newString =  ${newString}`)
+
+
+
+
+
+// стара версія:
+// const arrOfString = ["Oleksander", "Daniella29", "Oleksander33", "Daniella"]
+// const regular = /\d/g
+// const getStringsWithNumber = (regular, array) => { // ЩО ЦЕ ЗА НАЗВИ ПАРАМЕТРІВ І ЗМІННИХ? РОЗСЛАБИЛИСЬ БАЧУ!
+//   return array.filter((currentValue) => {
+//     if (regular.test(currentValue)) { // ЦЕ МОЖНА СПРОСТИТИ, ЯКЩО УВАЖНО ПОЧИТАТИ ЯК ПРАЦЮЄ ФІЛЬТЕР(АБО ЗГАДАТИ ЯК ЦЕ РОБИЛИ В ПОПЕРЕДНІЙ ТЕМІ)
+//       return currentValue
+//     }
+//     // console.log(`currentValue =  ${currentValue}`)
+//   }
+//   )
+// }
+// const newString = getStringsWithNumber(regular, arrOfString)
+// console.log(`newString =  ${newString}`)
 
 
 

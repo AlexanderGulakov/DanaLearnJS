@@ -12,6 +12,11 @@ let dateInTheText = regular.test(stringOfText)
 
 console.log(` = ${dateInTheText}`)
 
+
+// /\d{1,2}\/\d{1,2}\/\d{4}/g
+//   12     /   11   / 2001
+
+
 // 32.13.1993 - НЕ Є ДАТОЮ, АЛЕ ВЕРТАЄ ТРУ!
 
 //  const getDateOfText = (str, re) =>{
