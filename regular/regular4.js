@@ -1,0 +1,14 @@
+
+//Задача 4. Дано масив рядків. Вивести ті, у яких немає голосних літер.
+
+const arrOfString = ['Dana', 'Alex', 'cd', 'dnk', 'eva', 'fff', 'Lmn']
+console.log(`A array of string = ${arrOfString}`)
+const regular = /[aeiouy]/g
+const isVowel = (re, array) => { // ТЕ САМЕ + НАЗВА ФУНКЦІЇ ТЕЖ ЛАЙНО
+    return array.filter((currentValue) => {
+        if (!re.test(currentValue))
+            return currentValue
+    })
+}
+const newString = isVowel(regular, arrOfString)
+console.log(`newString = ${newString}`)

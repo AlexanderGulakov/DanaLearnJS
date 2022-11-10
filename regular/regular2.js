@@ -3,16 +3,16 @@
 
 const arrOfString = ["Oleksander", "Daniella29", "Oleksander33", "Daniella"]
 const regular = /\d/g
-const getResult = (re,array) => {
-   return array.filter((currentValue) => {
-       if(!re.test(currentValue)) {
-             return currentValue
-      } 
-      // console.log(`currentValue =  ${currentValue}`)
+const getResult = (re, array) => { // ТЕ САМЕ
+  return array.filter((currentValue) => {
+    if (!re.test(currentValue)) {
+      return currentValue
     }
-    )
+    // console.log(`currentValue =  ${currentValue}`)
+  }
+  )
 }
-const newString = getResult(regular,arrOfString)
+const newString = getResult(regular, arrOfString)
 console.log(`newString =  ${newString}`)
 
 

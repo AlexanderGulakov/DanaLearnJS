@@ -2,16 +2,16 @@
 
 const arrOfString = ["Oleksander", "Daniella29", "Oleksander33", "Daniella"]
 const regular = /\d/g
-const getResult = (re,array) => {
-   return array.filter((currentValue) => {
-       if(re.test(currentValue)) {
-             return currentValue
-      } 
-      // console.log(`currentValue =  ${currentValue}`)
+const getResult = (re, array) => { // ЩО ЦЕ ЗА НАЗВИ ПАРАМЕТРІВ І ЗМІННИХ? РОЗСЛАБИЛИСЬ БАЧУ!
+  return array.filter((currentValue) => { 
+    if (re.test(currentValue)) { // ЦЕ МОЖНА СПРОСТИТИ, ЯКЩО УВАЖНО ПОЧИТАТИ ЯК ПРАЦЮЄ ФІЛЬТЕР(АБО ЗГАДАТИ ЯК ЦЕ РОБИЛИ В ПОПЕРЕДНІЙ ТЕМІ)
+      return currentValue
     }
-    )
+    // console.log(`currentValue =  ${currentValue}`)
+  }
+  )
 }
-const newString = getResult(regular,arrOfString)
+const newString = getResult(regular, arrOfString)
 console.log(`newString =  ${newString}`)
 
 
@@ -24,7 +24,7 @@ console.log(`newString =  ${newString}`)
 //    const result = array.filter((currentValue) => {
 //        if(re.test(currentValue)) {
 //              return currentValue
-//       } 
+//       }
 //       // console.log(`currentValue =  ${currentValue}`)
 //     }
 //     )
@@ -40,9 +40,6 @@ console.log(`newString =  ${newString}`)
 //  console.log(result); // true
 
 
-//приклад
-// const arrOfString = "Oleksander Daniella29 Oleksander33 Daniella"
-// alert(arrOfString.match(/\d/g))
 
 
 
