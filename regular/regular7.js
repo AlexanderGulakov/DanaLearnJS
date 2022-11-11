@@ -2,16 +2,17 @@
 
 //[-!"#$%&'()*+,./:;<=>?@[\\\]_`{|}~]
 
-const stringOfText = "Oleksander, Daniella. ! Oleksander? Daniella:" 
+const stringOfText = "Oleksander, Daniella. ! Oleksander? Daniella:"
 console.log(`A string of text = ${stringOfText}`)
 const regular = /[, . ! ? :]/g
-const punctuationMarks  = stringOfText.match(regular)
+
+const punctuationMarks = stringOfText.match(regular)
 console.log(`Punctuation marks in the text= ${punctuationMarks}`) // , . ! ? :
 
 
 
- 
-// const stringOfText = "Oleksander, Daniella. ! Oleksander? Daniella:" 
+
+// const stringOfText = "Oleksander, Daniella. ! Oleksander? Daniella:"
 // console.log(`A string of text = ${stringOfText}`)
 // const regular = /[-!"#$%&'()*+,./:;<=>?@[\\\]_`{|}~]/g
 // const punctuationMarks  = stringOfText.match(regular)

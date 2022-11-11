@@ -3,8 +3,8 @@
 
 const arrOfString = ["Oleksander", "Daniella29", "Oleksander33", "Daniella"]
 const regular = /\d/g
+
 const getStringsWithNumber = (regular, array) => array.filter((currentValue) => !regular.test(currentValue))
-// console.log(`currentValue =  ${currentValue}`)
 const newString = getStringsWithNumber(regular, arrOfString)
 console.log(`newString =  ${newString}`)
 
